@@ -46,12 +46,31 @@ namespace NhibernateApp.Mapping
                 x.Column("Email");
             });
 
-            Property(b => b.Fullname, x =>
+            Property(b => b.FirstName, x =>
             {
                 x.Length(50);
                 x.Type(NHibernateUtil.StringClob);
                 x.NotNullable(true);
-                x.Column("Fullname");
+                x.Column("FirstName");
+            });
+
+
+
+            Property(b => b.LastName, x =>
+            {
+                x.Length(50);
+                x.Type(NHibernateUtil.StringClob);
+                x.NotNullable(true);
+                x.Column("LastName");
+            });
+
+
+            Property(b => b.Token, x =>
+            {
+                x.Length(50);
+                x.Type(NHibernateUtil.StringClob);
+                x.NotNullable(true);
+                x.Column("Token");
             });
 
         }

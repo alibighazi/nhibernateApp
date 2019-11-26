@@ -1,17 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using NHibernate;
 using NhibernateApp.Business;
-using NhibernateApp.DbContext;
 using NhibernateApp.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace NhibernateApp.Controllers
 {
     [ApiController]
+    //[Authorize]
     [Route("api/[controller]")]
     public class BookController : ControllerBase
     {
