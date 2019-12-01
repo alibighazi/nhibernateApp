@@ -1,0 +1,862 @@
+2019-11-29 23:54:04.962 +01:00 [Information] Starting up
+2019-11-29 23:54:06.561 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-11-29 23:54:06.606 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-11-29 23:54:06.608 +01:00 [Information] Bytecode provider name : "lcg"
+2019-11-29 23:54:06.611 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-11-29 23:54:06.611 +01:00 [Information] Using reflection optimizer
+2019-11-29 23:54:06.669 +01:00 [Information] Mapping class: "NhibernateApp.Models.Book" -> "Books"
+2019-11-29 23:54:06.680 +01:00 [Debug] Mapped property: Id -> Id, type: Int32
+2019-11-29 23:54:06.697 +01:00 [Debug] Mapped property: Title -> Title, type: StringClob
+2019-11-29 23:54:06.700 +01:00 [Information] Mapping class: "NhibernateApp.Models.User" -> "Users"
+2019-11-29 23:54:06.700 +01:00 [Debug] Mapped property: Id -> Id, type: Guid
+2019-11-29 23:54:06.701 +01:00 [Debug] Mapped property: FirstName -> FirstName, type: StringClob
+2019-11-29 23:54:06.701 +01:00 [Debug] Mapped property: LastName -> LastName, type: StringClob
+2019-11-29 23:54:06.701 +01:00 [Debug] Mapped property: Username -> Username, type: StringClob
+2019-11-29 23:54:06.701 +01:00 [Debug] Mapped property: Password -> Password, type: StringClob
+2019-11-29 23:54:06.701 +01:00 [Debug] Mapped property: Email -> Email, type: StringClob
+2019-11-29 23:54:06.701 +01:00 [Debug] Mapped property: Token -> Token, type: StringClob
+2019-11-29 23:54:06.711 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:06.725 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:06.726 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:54:06.802 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:08.052 +01:00 [Debug] Closing connection
+2019-11-29 23:54:08.065 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:08.065 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:08.065 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:08.066 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:08.068 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:08.085 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:08.086 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:08.086 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:08.086 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:08.087 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:08.092 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.093 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.099 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.099 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.100 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.100 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.100 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.101 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.101 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.104 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:54:08.104 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:08.246 +01:00 [Debug] 
+    drop table if exists Books
+2019-11-29 23:54:08.355 +01:00 [Debug] 
+    drop table if exists Users
+2019-11-29 23:54:08.438 +01:00 [Debug] 
+    create table Books (
+        Id INTEGER not null,
+       Title VARCHAR(50) not null,
+       primary key (Id)
+    )
+2019-11-29 23:54:08.542 +01:00 [Debug] 
+    create table Users (
+        Id BINARY(16) not null,
+       FirstName VARCHAR(50) not null,
+       LastName VARCHAR(50) not null,
+       Username VARCHAR(50) not null,
+       Password VARCHAR(50) not null,
+       Email VARCHAR(50) not null,
+       Token VARCHAR(50) not null,
+       primary key (Id)
+    )
+2019-11-29 23:54:08.643 +01:00 [Debug] Closing connection
+2019-11-29 23:54:08.643 +01:00 [Debug] Disposing of ConnectionProvider.
+2019-11-29 23:54:08.644 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.645 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:08.645 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:08.645 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:08.645 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:08.645 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:08.660 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.675 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:08.738 +01:00 [Information] Using dialect defined converter
+2019-11-29 23:54:08.739 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-11-29 23:54:08.739 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:54:08.740 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-11-29 23:54:08.741 +01:00 [Information] Optimize cache for minimal puts: False
+2019-11-29 23:54:08.741 +01:00 [Information] Connection release mode: "auto"
+2019-11-29 23:54:08.741 +01:00 [Information] Default batch fetch size: 1
+2019-11-29 23:54:08.741 +01:00 [Information] echoing all SQL to stdout
+2019-11-29 23:54:08.741 +01:00 [Information] Statistics: "disabled"
+2019-11-29 23:54:08.741 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-11-29 23:54:08.741 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-11-29 23:54:08.742 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-11-29 23:54:08.744 +01:00 [Information] Query language substitutions: "{}"
+2019-11-29 23:54:08.744 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-11-29 23:54:08.744 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-11-29 23:54:08.744 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-11-29 23:54:08.744 +01:00 [Debug] Wrap result sets: "disabled"
+2019-11-29 23:54:08.744 +01:00 [Debug] Batch versioned data: "disabled"
+2019-11-29 23:54:08.745 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-11-29 23:54:08.745 +01:00 [Information] Default flush mode: Auto
+2019-11-29 23:54:08.745 +01:00 [Information] Named query checking : "enabled"
+2019-11-29 23:54:08.747 +01:00 [Debug] Track session id: enabled
+2019-11-29 23:54:08.759 +01:00 [Information] building session factory
+2019-11-29 23:54:08.760 +01:00 [Debug] Session factory constructed with filter configurations : "{}"
+2019-11-29 23:54:08.761 +01:00 [Debug] instantiating session factory with properties: "{'use_reflection_optimizer'='True', 'dialect'='NHibernate.Dialect.MySQL5Dialect, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Server=51.83.77.154;Port=32778;Database=NhibernateWebApp;User ID=root;Password=alibi23587;', 'hbm2ddl.keywords'='auto-quote', 'hbm2ddl.auto'='validate', 'show_sql'='true', 'format_sql'='true', 'use_sql_comments'='true'}"
+2019-11-29 23:54:08.761 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:08.869 +01:00 [Debug] Closing connection
+2019-11-29 23:54:08.871 +01:00 [Debug] initializing class SessionFactoryObjectFactory
+2019-11-29 23:54:08.871 +01:00 [Debug] registered: "ffdc088360974badaf8754542f304786"("unnamed")
+2019-11-29 23:54:08.871 +01:00 [Information] no name configured
+2019-11-29 23:54:08.927 +01:00 [Debug] "No custom" accessors found for entity: "NhibernateApp.Models.Book"
+2019-11-29 23:54:08.942 +01:00 [Debug] Create Instantiator using optimizer for:"NhibernateApp.Models.Book"
+2019-11-29 23:54:08.963 +01:00 [Debug] "No custom" accessors found for entity: "NhibernateApp.Models.User"
+2019-11-29 23:54:08.964 +01:00 [Debug] Create Instantiator using optimizer for:"NhibernateApp.Models.User"
+2019-11-29 23:54:08.999 +01:00 [Debug] Static SQL for entity: "NhibernateApp.Models.Book"
+2019-11-29 23:54:09.001 +01:00 [Debug]  Version select: ["/* get version NhibernateApp.Models.Book */ SELECT Id FROM Books WHERE Id = ", "?"]
+2019-11-29 23:54:09.003 +01:00 [Debug]  Snapshot select: ["/* get current state NhibernateApp.Models.Book */ SELECT book_.Id, book_.Title as title2_0_ FROM Books book_ WHERE book_.Id=", "?"]
+2019-11-29 23:54:09.003 +01:00 [Debug]  Insert 0: "/* insert NhibernateApp.Models.Book */ INSERT INTO Books (Title, Id) VALUES (?, ?)"
+2019-11-29 23:54:09.003 +01:00 [Debug]  Update 0: "/* update NhibernateApp.Models.Book */ UPDATE Books SET Title = ? WHERE Id = ?"
+2019-11-29 23:54:09.003 +01:00 [Debug]  Delete 0: "/* delete NhibernateApp.Models.Book */ DELETE FROM Books WHERE Id = ?"
+2019-11-29 23:54:09.038 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:09.038 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:09.038 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:54:09.039 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:54:09.039 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:54:09.041 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+MergeCascadingAction" on entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:09.041 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+RefreshCascadingAction" on entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:09.042 +01:00 [Debug] Static SQL for entity: "NhibernateApp.Models.User"
+2019-11-29 23:54:09.042 +01:00 [Debug]  Version select: ["/* get version NhibernateApp.Models.User */ SELECT Id FROM Users WHERE Id = ", "?"]
+2019-11-29 23:54:09.042 +01:00 [Debug]  Snapshot select: ["/* get current state NhibernateApp.Models.User */ SELECT user_.Id, user_.FirstName as firstname2_1_, user_.LastName as lastname3_1_, user_.Username as username4_1_, user_.Password as password5_1_, user_.Email as email6_1_, user_.Token as token7_1_ FROM Users user_ WHERE user_.Id=", "?"]
+2019-11-29 23:54:09.042 +01:00 [Debug]  Insert 0: "/* insert NhibernateApp.Models.User */ INSERT INTO Users (FirstName, LastName, Username, Password, Email, Token, Id) VALUES (?, ?, ?, ?, ?, ?, ?)"
+2019-11-29 23:54:09.042 +01:00 [Debug]  Update 0: "/* update NhibernateApp.Models.User */ UPDATE Users SET FirstName = ?, LastName = ?, Username = ?, Password = ?, Email = ?, Token = ? WHERE Id = ?"
+2019-11-29 23:54:09.042 +01:00 [Debug]  Delete 0: "/* delete NhibernateApp.Models.User */ DELETE FROM Users WHERE Id = ?"
+2019-11-29 23:54:09.043 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:09.043 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:09.043 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:54:09.043 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:54:09.043 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:54:09.043 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+MergeCascadingAction" on entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:09.044 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+RefreshCascadingAction" on entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:09.044 +01:00 [Debug] Instantiated session factory
+2019-11-29 23:54:09.045 +01:00 [Information] Running schema validator
+2019-11-29 23:54:09.045 +01:00 [Information] fetching database metadata
+2019-11-29 23:54:09.045 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:09.160 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:09.160 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:09.160 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:09.160 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:09.160 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:09.311 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-11-29 23:54:09.312 +01:00 [Information] columns: "Id, Title"
+2019-11-29 23:54:09.450 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-11-29 23:54:09.450 +01:00 [Information] columns: "Id, FirstName, LastName, Username, Password, Email, Token"
+2019-11-29 23:54:09.450 +01:00 [Debug] Closing connection
+2019-11-29 23:54:09.456 +01:00 [Debug] Checking 0 named HQL queries
+2019-11-29 23:54:09.456 +01:00 [Debug] Checking 0 named SQL queries
+2019-11-29 23:54:09.804 +01:00 [Debug] Hosting starting
+2019-11-29 23:54:09.840 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-29 23:54:09.848 +01:00 [Debug] Reading data from file '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys\key-dc9eb012-948e-46c8-afec-bf899bb315a1.xml"'.
+2019-11-29 23:54:09.874 +01:00 [Debug] Found key {dc9eb012-948e-46c8-afec-bf899bb315a1}.
+2019-11-29 23:54:09.887 +01:00 [Debug] Considering key {dc9eb012-948e-46c8-afec-bf899bb315a1} with expiration date 2020-02-08 17:27:50Z as default key.
+2019-11-29 23:54:09.896 +01:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-11-29 23:54:09.898 +01:00 [Debug] Decrypting secret element using Windows DPAPI.
+2019-11-29 23:54:09.900 +01:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-11-29 23:54:09.905 +01:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2019-11-29 23:54:09.907 +01:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2019-11-29 23:54:09.910 +01:00 [Debug] Using key {dc9eb012-948e-46c8-afec-bf899bb315a1} as the default key.
+2019-11-29 23:54:09.911 +01:00 [Debug] Key ring with default key {dc9eb012-948e-46c8-afec-bf899bb315a1} was loaded during application startup.
+2019-11-29 23:54:10.113 +01:00 [Debug] Loaded hosting startup assembly "NhibernateApp"
+2019-11-29 23:54:10.114 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-11-29 23:54:10.114 +01:00 [Information] Hosting environment: "Development"
+2019-11-29 23:54:10.114 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-11-29 23:54:10.114 +01:00 [Debug] Hosting started
+2019-11-29 23:54:10.158 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-11-29 23:54:10.161 +01:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2019-11-29 23:54:10.420 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:54:10.466 +01:00 [Debug] 1 candidate(s) found for the request path '"/api/book/populate"'
+2019-11-29 23:54:10.469 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"' with route pattern '"api/Book/Populate"' is valid for the request path '"/api/book/populate"'
+2019-11-29 23:54:10.470 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:54:10.471 +01:00 [Information] Executing endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:54:10.476 +01:00 [Debug] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2019-11-29 23:54:10.509 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "NhibernateApp.Models.Book Populate()" on controller "NhibernateApp.Controllers.BookController" ("NhibernateApp").
+2019-11-29 23:54:10.510 +01:00 [Debug] Execution plan of "authorization" filters (in the following order): ["None"]
+2019-11-29 23:54:10.510 +01:00 [Debug] Execution plan of "resource" filters (in the following order): ["None"]
+2019-11-29 23:54:10.510 +01:00 [Debug] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2019-11-29 23:54:10.511 +01:00 [Debug] Execution plan of "exception" filters (in the following order): ["None"]
+2019-11-29 23:54:10.511 +01:00 [Debug] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2019-11-29 23:54:10.512 +01:00 [Debug] Executing controller factory for controller "NhibernateApp.Controllers.BookController" ("NhibernateApp")
+2019-11-29 23:54:10.514 +01:00 [Debug] Opening Hibernate Session.
+2019-11-29 23:54:10.523 +01:00 [Debug] [session-id=9bbccdcb-db53-4433-bcc2-1ed8a599ba26] opened session at timestamp: 637106684505, for session factory: [null/"ffdc088360974badaf8754542f304786"]
+2019-11-29 23:54:10.526 +01:00 [Debug] Executed controller factory for controller "NhibernateApp.Controllers.BookController" ("NhibernateApp")
+2019-11-29 23:54:10.529 +01:00 [Debug] Begin (Unspecified)
+2019-11-29 23:54:10.530 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:10.777 +01:00 [Debug] unsaved-value: 0
+2019-11-29 23:54:10.777 +01:00 [Debug] transient instance of: "NhibernateApp.Models.Book"
+2019-11-29 23:54:10.778 +01:00 [Debug] saving transient instance
+2019-11-29 23:54:10.779 +01:00 [Debug] fetching initial value: ["select max(Id) from Books"]
+2019-11-29 23:54:10.782 +01:00 [Debug] Opened new DbCommand, open DbCommands: 1
+2019-11-29 23:54:10.782 +01:00 [Debug] Building an DbCommand object for the SqlString: ["select max(Id) from Books"]
+2019-11-29 23:54:10.787 +01:00 [Debug] 
+    select
+        max(Id) 
+    from
+        Books
+2019-11-29 23:54:10.788 +01:00 [Debug] Enlist Command
+2019-11-29 23:54:10.840 +01:00 [Debug] ExecuteReader took 50 ms
+2019-11-29 23:54:10.840 +01:00 [Debug] Opened DbDataReader, open DbDataReaders: 1
+2019-11-29 23:54:10.841 +01:00 [Debug] first free id: 1
+2019-11-29 23:54:10.842 +01:00 [Debug] Closed DbDataReader, open DbDataReaders :0
+2019-11-29 23:54:10.842 +01:00 [Debug] DataReader was closed after 53 ms
+2019-11-29 23:54:10.843 +01:00 [Debug] Closed DbCommand, open DbCommands: 0
+2019-11-29 23:54:10.844 +01:00 [Debug] generated identifier: "1", using strategy: "NHibernate.Id.IncrementGenerator"
+2019-11-29 23:54:10.845 +01:00 [Debug] saving "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:54:10.886 +01:00 [Debug] Start Commit
+2019-11-29 23:54:10.887 +01:00 [Debug] before transaction completion
+2019-11-29 23:54:10.889 +01:00 [Debug] flushing session
+2019-11-29 23:54:10.890 +01:00 [Debug] processing flush-time cascades
+2019-11-29 23:54:10.893 +01:00 [Debug] dirty checking collections
+2019-11-29 23:54:10.894 +01:00 [Debug] Flushing entities and processing referenced collections
+2019-11-29 23:54:10.903 +01:00 [Debug] Processing unreferenced collections
+2019-11-29 23:54:10.903 +01:00 [Debug] Scheduling collection removes/(re)creates/updates
+2019-11-29 23:54:10.903 +01:00 [Debug] Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2019-11-29 23:54:10.904 +01:00 [Debug] Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2019-11-29 23:54:10.905 +01:00 [Debug] listing entities:
+2019-11-29 23:54:10.906 +01:00 [Debug] NhibernateApp.Models.Book{'Id'='1', 'Title'='book text matter'}
+2019-11-29 23:54:10.907 +01:00 [Debug] executing flush
+2019-11-29 23:54:10.907 +01:00 [Debug] Registering flush begin
+2019-11-29 23:54:10.911 +01:00 [Debug] Inserting entity: "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:54:10.914 +01:00 [Debug] Opened new DbCommand, open DbCommands: 1
+2019-11-29 23:54:10.914 +01:00 [Debug] Building an DbCommand object for the SqlString: ["/* insert NhibernateApp.Models.Book */ INSERT INTO Books (Title, Id) VALUES (", "?", ", ", "?", ")"]
+2019-11-29 23:54:10.916 +01:00 [Debug] Dehydrating entity: "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:54:10.917 +01:00 [Debug] binding '"book text matter"' to parameter: 0
+2019-11-29 23:54:10.921 +01:00 [Debug] binding '"1"' to parameter: 1
+2019-11-29 23:54:10.923 +01:00 [Debug] 
+    /* insert NhibernateApp.Models.Book
+        */ INSERT 
+        INTO
+            Books
+            (Title, Id) 
+        VALUES
+            (?p0, ?p1);
+    ?p0 = 'book text matter' [Type: String (16:0:0)], ?p1 = 1 [Type: Int32 (0:0:0)]
+2019-11-29 23:54:10.923 +01:00 [Debug] Enlist Command
+2019-11-29 23:54:10.975 +01:00 [Debug] ExecuteNonQuery took 52 ms
+2019-11-29 23:54:10.980 +01:00 [Debug] ExecuteBatch for 1 statements took 0 ms
+2019-11-29 23:54:10.980 +01:00 [Debug] Closed DbCommand, open DbCommands: 0
+2019-11-29 23:54:10.981 +01:00 [Debug] Registering flush end
+2019-11-29 23:54:10.984 +01:00 [Debug] post flush
+2019-11-29 23:54:11.040 +01:00 [Debug] DbTransaction Committed
+2019-11-29 23:54:11.041 +01:00 [Debug] Aggressively releasing database connection
+2019-11-29 23:54:11.042 +01:00 [Debug] Closing connection
+2019-11-29 23:54:11.042 +01:00 [Debug] transaction completion
+2019-11-29 23:54:11.047 +01:00 [Debug] DbTransaction disposed.
+2019-11-29 23:54:11.049 +01:00 [Debug] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2019-11-29 23:54:11.054 +01:00 [Debug] No information found on request to perform content negotiation.
+2019-11-29 23:54:11.054 +01:00 [Debug] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2019-11-29 23:54:11.054 +01:00 [Debug] Attempting to select the first formatter in the output formatters list which can write the result.
+2019-11-29 23:54:11.055 +01:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+2019-11-29 23:54:11.055 +01:00 [Information] Executing ObjectResult, writing value of type '"NhibernateApp.Models.Book"'.
+2019-11-29 23:54:11.112 +01:00 [Information] Executed action "NhibernateApp.Controllers.BookController.Populate (NhibernateApp)" in 596.1124ms
+2019-11-29 23:54:11.114 +01:00 [Information] Executed endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:54:11.116 +01:00 [Debug] [session-id=9bbccdcb-db53-4433-bcc2-1ed8a599ba26] running ISession.Dispose()
+2019-11-29 23:54:11.116 +01:00 [Debug] [session-id=9bbccdcb-db53-4433-bcc2-1ed8a599ba26] executing real Dispose(True)
+2019-11-29 23:54:11.117 +01:00 [Debug] closing session
+2019-11-29 23:54:11.118 +01:00 [Debug] running BatcherImpl.Dispose(true)
+2019-11-29 23:54:11.122 +01:00 [Information] Request finished in 965.8945ms 200 application/json; charset=utf-8
+2019-11-29 23:54:11.294 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/favicon.ico  
+2019-11-29 23:54:11.297 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:54:11.299 +01:00 [Debug] No candidates found for the request path '"/favicon.ico"'
+2019-11-29 23:54:11.299 +01:00 [Debug] Request did not match any endpoints
+2019-11-29 23:54:11.303 +01:00 [Information] Request finished in 9.656600000000001ms 404 
+2019-11-29 23:54:43.947 +01:00 [Information] Starting up
+2019-11-29 23:54:44.880 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-11-29 23:54:44.902 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-11-29 23:54:44.904 +01:00 [Information] Bytecode provider name : "lcg"
+2019-11-29 23:54:44.908 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-11-29 23:54:44.908 +01:00 [Information] Using reflection optimizer
+2019-11-29 23:54:44.965 +01:00 [Information] Mapping class: "NhibernateApp.Models.Book" -> "Books"
+2019-11-29 23:54:44.975 +01:00 [Debug] Mapped property: Id -> Id, type: Int32
+2019-11-29 23:54:44.996 +01:00 [Debug] Mapped property: Title -> Title, type: StringClob
+2019-11-29 23:54:45.000 +01:00 [Information] Mapping class: "NhibernateApp.Models.User" -> "Users"
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: Id -> Id, type: Guid
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: FirstName -> FirstName, type: StringClob
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: LastName -> LastName, type: StringClob
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: Username -> Username, type: StringClob
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: Password -> Password, type: StringClob
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: Email -> Email, type: StringClob
+2019-11-29 23:54:45.000 +01:00 [Debug] Mapped property: Token -> Token, type: StringClob
+2019-11-29 23:54:45.014 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:45.031 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:45.033 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:54:45.064 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:46.077 +01:00 [Debug] Closing connection
+2019-11-29 23:54:46.086 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:46.087 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:46.087 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:46.087 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:46.089 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:46.107 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:46.107 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:46.107 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:46.107 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:46.107 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:46.113 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.115 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.120 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.120 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.121 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.121 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.121 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.122 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.122 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.124 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:54:46.125 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:46.220 +01:00 [Debug] 
+    drop table if exists Books
+2019-11-29 23:54:46.320 +01:00 [Debug] 
+    drop table if exists Users
+2019-11-29 23:54:46.409 +01:00 [Debug] 
+    create table Books (
+        Id INTEGER not null,
+       Title VARCHAR(50) not null,
+       primary key (Id)
+    )
+2019-11-29 23:54:46.541 +01:00 [Debug] 
+    create table Users (
+        Id BINARY(16) not null,
+       FirstName VARCHAR(50) not null,
+       LastName VARCHAR(50) not null,
+       Username VARCHAR(50) not null,
+       Password VARCHAR(50) not null,
+       Email VARCHAR(50) not null,
+       Token VARCHAR(50) not null,
+       primary key (Id)
+    )
+2019-11-29 23:54:46.632 +01:00 [Debug] Closing connection
+2019-11-29 23:54:46.633 +01:00 [Debug] Disposing of ConnectionProvider.
+2019-11-29 23:54:46.634 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.635 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:46.636 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:46.636 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:46.636 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:46.636 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:46.653 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.677 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:54:46.739 +01:00 [Information] Using dialect defined converter
+2019-11-29 23:54:46.740 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-11-29 23:54:46.740 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:54:46.741 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-11-29 23:54:46.742 +01:00 [Information] Optimize cache for minimal puts: False
+2019-11-29 23:54:46.742 +01:00 [Information] Connection release mode: "auto"
+2019-11-29 23:54:46.742 +01:00 [Information] Default batch fetch size: 1
+2019-11-29 23:54:46.742 +01:00 [Information] echoing all SQL to stdout
+2019-11-29 23:54:46.742 +01:00 [Information] Statistics: "disabled"
+2019-11-29 23:54:46.742 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-11-29 23:54:46.743 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-11-29 23:54:46.744 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-11-29 23:54:46.745 +01:00 [Information] Query language substitutions: "{}"
+2019-11-29 23:54:46.746 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-11-29 23:54:46.746 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-11-29 23:54:46.746 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-11-29 23:54:46.746 +01:00 [Debug] Wrap result sets: "disabled"
+2019-11-29 23:54:46.746 +01:00 [Debug] Batch versioned data: "disabled"
+2019-11-29 23:54:46.747 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-11-29 23:54:46.747 +01:00 [Information] Default flush mode: Auto
+2019-11-29 23:54:46.748 +01:00 [Information] Named query checking : "enabled"
+2019-11-29 23:54:46.749 +01:00 [Debug] Track session id: enabled
+2019-11-29 23:54:46.764 +01:00 [Information] building session factory
+2019-11-29 23:54:46.764 +01:00 [Debug] Session factory constructed with filter configurations : "{}"
+2019-11-29 23:54:46.765 +01:00 [Debug] instantiating session factory with properties: "{'use_reflection_optimizer'='True', 'dialect'='NHibernate.Dialect.MySQL5Dialect, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Server=51.83.77.154;Port=32778;Database=NhibernateWebApp;User ID=root;Password=alibi23587;', 'hbm2ddl.keywords'='auto-quote', 'hbm2ddl.auto'='validate', 'show_sql'='true', 'format_sql'='true', 'use_sql_comments'='true'}"
+2019-11-29 23:54:46.766 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:46.879 +01:00 [Debug] Closing connection
+2019-11-29 23:54:46.880 +01:00 [Debug] initializing class SessionFactoryObjectFactory
+2019-11-29 23:54:46.881 +01:00 [Debug] registered: "c8a814d8544e48969df5309fa7267bf8"("unnamed")
+2019-11-29 23:54:46.881 +01:00 [Information] no name configured
+2019-11-29 23:54:46.948 +01:00 [Debug] "No custom" accessors found for entity: "NhibernateApp.Models.Book"
+2019-11-29 23:54:46.968 +01:00 [Debug] Create Instantiator using optimizer for:"NhibernateApp.Models.Book"
+2019-11-29 23:54:47.002 +01:00 [Debug] "No custom" accessors found for entity: "NhibernateApp.Models.User"
+2019-11-29 23:54:47.002 +01:00 [Debug] Create Instantiator using optimizer for:"NhibernateApp.Models.User"
+2019-11-29 23:54:47.046 +01:00 [Debug] Static SQL for entity: "NhibernateApp.Models.Book"
+2019-11-29 23:54:47.048 +01:00 [Debug]  Version select: ["/* get version NhibernateApp.Models.Book */ SELECT Id FROM Books WHERE Id = ", "?"]
+2019-11-29 23:54:47.050 +01:00 [Debug]  Snapshot select: ["/* get current state NhibernateApp.Models.Book */ SELECT book_.Id, book_.Title as title2_0_ FROM Books book_ WHERE book_.Id=", "?"]
+2019-11-29 23:54:47.050 +01:00 [Debug]  Insert 0: "/* insert NhibernateApp.Models.Book */ INSERT INTO Books (Title, Id) VALUES (?, ?)"
+2019-11-29 23:54:47.050 +01:00 [Debug]  Update 0: "/* update NhibernateApp.Models.Book */ UPDATE Books SET Title = ? WHERE Id = ?"
+2019-11-29 23:54:47.050 +01:00 [Debug]  Delete 0: "/* delete NhibernateApp.Models.Book */ DELETE FROM Books WHERE Id = ?"
+2019-11-29 23:54:47.088 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:47.089 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:47.089 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:54:47.089 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:54:47.089 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:54:47.092 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+MergeCascadingAction" on entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:47.093 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+RefreshCascadingAction" on entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:54:47.095 +01:00 [Debug] Static SQL for entity: "NhibernateApp.Models.User"
+2019-11-29 23:54:47.095 +01:00 [Debug]  Version select: ["/* get version NhibernateApp.Models.User */ SELECT Id FROM Users WHERE Id = ", "?"]
+2019-11-29 23:54:47.095 +01:00 [Debug]  Snapshot select: ["/* get current state NhibernateApp.Models.User */ SELECT user_.Id, user_.FirstName as firstname2_1_, user_.LastName as lastname3_1_, user_.Username as username4_1_, user_.Password as password5_1_, user_.Email as email6_1_, user_.Token as token7_1_ FROM Users user_ WHERE user_.Id=", "?"]
+2019-11-29 23:54:47.095 +01:00 [Debug]  Insert 0: "/* insert NhibernateApp.Models.User */ INSERT INTO Users (FirstName, LastName, Username, Password, Email, Token, Id) VALUES (?, ?, ?, ?, ?, ?, ?)"
+2019-11-29 23:54:47.095 +01:00 [Debug]  Update 0: "/* update NhibernateApp.Models.User */ UPDATE Users SET FirstName = ?, LastName = ?, Username = ?, Password = ?, Email = ?, Token = ? WHERE Id = ?"
+2019-11-29 23:54:47.095 +01:00 [Debug]  Delete 0: "/* delete NhibernateApp.Models.User */ DELETE FROM Users WHERE Id = ?"
+2019-11-29 23:54:47.095 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:47.095 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:47.095 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:54:47.096 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:54:47.096 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:54:47.096 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+MergeCascadingAction" on entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:47.096 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+RefreshCascadingAction" on entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:54:47.096 +01:00 [Debug] Instantiated session factory
+2019-11-29 23:54:47.097 +01:00 [Information] Running schema validator
+2019-11-29 23:54:47.097 +01:00 [Information] fetching database metadata
+2019-11-29 23:54:47.097 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:47.195 +01:00 [Information] checking mappings queue
+2019-11-29 23:54:47.195 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:54:47.195 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:54:47.195 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:54:47.196 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:54:47.329 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-11-29 23:54:47.330 +01:00 [Information] columns: "Id, Title"
+2019-11-29 23:54:47.443 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-11-29 23:54:47.445 +01:00 [Information] columns: "Id, FirstName, LastName, Username, Password, Email, Token"
+2019-11-29 23:54:47.445 +01:00 [Debug] Closing connection
+2019-11-29 23:54:47.449 +01:00 [Debug] Checking 0 named HQL queries
+2019-11-29 23:54:47.449 +01:00 [Debug] Checking 0 named SQL queries
+2019-11-29 23:54:47.647 +01:00 [Debug] Hosting starting
+2019-11-29 23:54:47.675 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-29 23:54:47.685 +01:00 [Debug] Reading data from file '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys\key-dc9eb012-948e-46c8-afec-bf899bb315a1.xml"'.
+2019-11-29 23:54:47.696 +01:00 [Debug] Found key {dc9eb012-948e-46c8-afec-bf899bb315a1}.
+2019-11-29 23:54:47.711 +01:00 [Debug] Considering key {dc9eb012-948e-46c8-afec-bf899bb315a1} with expiration date 2020-02-08 17:27:50Z as default key.
+2019-11-29 23:54:47.721 +01:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-11-29 23:54:47.728 +01:00 [Debug] Decrypting secret element using Windows DPAPI.
+2019-11-29 23:54:47.730 +01:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-11-29 23:54:47.735 +01:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2019-11-29 23:54:47.737 +01:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2019-11-29 23:54:47.744 +01:00 [Debug] Using key {dc9eb012-948e-46c8-afec-bf899bb315a1} as the default key.
+2019-11-29 23:54:47.745 +01:00 [Debug] Key ring with default key {dc9eb012-948e-46c8-afec-bf899bb315a1} was loaded during application startup.
+2019-11-29 23:54:47.886 +01:00 [Debug] Loaded hosting startup assembly "NhibernateApp"
+2019-11-29 23:54:47.886 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-11-29 23:54:47.886 +01:00 [Information] Hosting environment: "Development"
+2019-11-29 23:54:47.886 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-11-29 23:54:47.887 +01:00 [Debug] Hosting started
+2019-11-29 23:54:47.926 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-11-29 23:54:47.930 +01:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2019-11-29 23:54:48.010 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:54:48.065 +01:00 [Debug] 1 candidate(s) found for the request path '"/api/book/populate"'
+2019-11-29 23:54:48.069 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"' with route pattern '"api/Book/Populate"' is valid for the request path '"/api/book/populate"'
+2019-11-29 23:54:48.070 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:54:48.070 +01:00 [Information] Executing endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:54:48.078 +01:00 [Debug] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2019-11-29 23:54:48.109 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "NhibernateApp.Models.Book Populate()" on controller "NhibernateApp.Controllers.BookController" ("NhibernateApp").
+2019-11-29 23:54:48.110 +01:00 [Debug] Execution plan of "authorization" filters (in the following order): ["None"]
+2019-11-29 23:54:48.110 +01:00 [Debug] Execution plan of "resource" filters (in the following order): ["None"]
+2019-11-29 23:54:48.111 +01:00 [Debug] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2019-11-29 23:54:48.111 +01:00 [Debug] Execution plan of "exception" filters (in the following order): ["None"]
+2019-11-29 23:54:48.111 +01:00 [Debug] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2019-11-29 23:54:48.113 +01:00 [Debug] Executing controller factory for controller "NhibernateApp.Controllers.BookController" ("NhibernateApp")
+2019-11-29 23:54:48.115 +01:00 [Debug] Opening Hibernate Session.
+2019-11-29 23:54:48.126 +01:00 [Debug] [session-id=ef30680a-7054-45a6-81fa-620be3e5c572] opened session at timestamp: 637106684881, for session factory: [null/"c8a814d8544e48969df5309fa7267bf8"]
+2019-11-29 23:54:48.130 +01:00 [Debug] Executed controller factory for controller "NhibernateApp.Controllers.BookController" ("NhibernateApp")
+2019-11-29 23:54:48.134 +01:00 [Debug] Begin (Unspecified)
+2019-11-29 23:54:48.135 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:54:48.364 +01:00 [Debug] unsaved-value: 0
+2019-11-29 23:54:48.365 +01:00 [Debug] transient instance of: "NhibernateApp.Models.Book"
+2019-11-29 23:54:48.366 +01:00 [Debug] saving transient instance
+2019-11-29 23:54:48.367 +01:00 [Debug] fetching initial value: ["select max(Id) from Books"]
+2019-11-29 23:54:48.369 +01:00 [Debug] Opened new DbCommand, open DbCommands: 1
+2019-11-29 23:54:48.370 +01:00 [Debug] Building an DbCommand object for the SqlString: ["select max(Id) from Books"]
+2019-11-29 23:54:48.382 +01:00 [Debug] 
+    select
+        max(Id) 
+    from
+        Books
+2019-11-29 23:54:48.383 +01:00 [Debug] Enlist Command
+2019-11-29 23:54:48.454 +01:00 [Debug] ExecuteReader took 69 ms
+2019-11-29 23:54:48.455 +01:00 [Debug] Opened DbDataReader, open DbDataReaders: 1
+2019-11-29 23:54:48.459 +01:00 [Debug] first free id: 1
+2019-11-29 23:54:48.461 +01:00 [Debug] Closed DbDataReader, open DbDataReaders :0
+2019-11-29 23:54:48.462 +01:00 [Debug] DataReader was closed after 78 ms
+2019-11-29 23:54:48.463 +01:00 [Debug] Closed DbCommand, open DbCommands: 0
+2019-11-29 23:54:48.465 +01:00 [Debug] generated identifier: "1", using strategy: "NHibernate.Id.IncrementGenerator"
+2019-11-29 23:54:48.466 +01:00 [Debug] saving "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:54:48.497 +01:00 [Debug] Start Commit
+2019-11-29 23:54:48.498 +01:00 [Debug] before transaction completion
+2019-11-29 23:54:48.500 +01:00 [Debug] flushing session
+2019-11-29 23:54:48.502 +01:00 [Debug] processing flush-time cascades
+2019-11-29 23:54:48.506 +01:00 [Debug] dirty checking collections
+2019-11-29 23:54:48.510 +01:00 [Debug] Flushing entities and processing referenced collections
+2019-11-29 23:54:48.522 +01:00 [Debug] Processing unreferenced collections
+2019-11-29 23:54:48.522 +01:00 [Debug] Scheduling collection removes/(re)creates/updates
+2019-11-29 23:54:48.523 +01:00 [Debug] Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2019-11-29 23:54:48.524 +01:00 [Debug] Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2019-11-29 23:54:48.526 +01:00 [Debug] listing entities:
+2019-11-29 23:54:48.529 +01:00 [Debug] NhibernateApp.Models.Book{'Id'='1', 'Title'='book text matter'}
+2019-11-29 23:54:48.529 +01:00 [Debug] executing flush
+2019-11-29 23:54:48.530 +01:00 [Debug] Registering flush begin
+2019-11-29 23:54:48.534 +01:00 [Debug] Inserting entity: "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:54:48.542 +01:00 [Debug] Opened new DbCommand, open DbCommands: 1
+2019-11-29 23:54:48.542 +01:00 [Debug] Building an DbCommand object for the SqlString: ["/* insert NhibernateApp.Models.Book */ INSERT INTO Books (Title, Id) VALUES (", "?", ", ", "?", ")"]
+2019-11-29 23:54:48.544 +01:00 [Debug] Dehydrating entity: "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:54:48.545 +01:00 [Debug] binding '"book text matter"' to parameter: 0
+2019-11-29 23:54:48.548 +01:00 [Debug] binding '"1"' to parameter: 1
+2019-11-29 23:54:48.551 +01:00 [Debug] 
+    /* insert NhibernateApp.Models.Book
+        */ INSERT 
+        INTO
+            Books
+            (Title, Id) 
+        VALUES
+            (?p0, ?p1);
+    ?p0 = 'book text matter' [Type: String (16:0:0)], ?p1 = 1 [Type: Int32 (0:0:0)]
+2019-11-29 23:54:48.551 +01:00 [Debug] Enlist Command
+2019-11-29 23:54:48.608 +01:00 [Debug] ExecuteNonQuery took 56 ms
+2019-11-29 23:54:48.613 +01:00 [Debug] ExecuteBatch for 1 statements took 0 ms
+2019-11-29 23:54:48.613 +01:00 [Debug] Closed DbCommand, open DbCommands: 0
+2019-11-29 23:54:48.614 +01:00 [Debug] Registering flush end
+2019-11-29 23:54:48.617 +01:00 [Debug] post flush
+2019-11-29 23:54:48.682 +01:00 [Debug] DbTransaction Committed
+2019-11-29 23:54:48.683 +01:00 [Debug] Aggressively releasing database connection
+2019-11-29 23:54:48.683 +01:00 [Debug] Closing connection
+2019-11-29 23:54:48.683 +01:00 [Debug] transaction completion
+2019-11-29 23:54:48.686 +01:00 [Debug] DbTransaction disposed.
+2019-11-29 23:54:48.692 +01:00 [Debug] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2019-11-29 23:54:48.694 +01:00 [Debug] No information found on request to perform content negotiation.
+2019-11-29 23:54:48.695 +01:00 [Debug] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2019-11-29 23:54:48.695 +01:00 [Debug] Attempting to select the first formatter in the output formatters list which can write the result.
+2019-11-29 23:54:48.696 +01:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+2019-11-29 23:54:48.696 +01:00 [Information] Executing ObjectResult, writing value of type '"NhibernateApp.Models.Book"'.
+2019-11-29 23:54:48.737 +01:00 [Information] Executed action "NhibernateApp.Controllers.BookController.Populate (NhibernateApp)" in 620.9061ms
+2019-11-29 23:54:48.741 +01:00 [Information] Executed endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:54:48.744 +01:00 [Debug] [session-id=ef30680a-7054-45a6-81fa-620be3e5c572] running ISession.Dispose()
+2019-11-29 23:54:48.745 +01:00 [Debug] [session-id=ef30680a-7054-45a6-81fa-620be3e5c572] executing real Dispose(True)
+2019-11-29 23:54:48.745 +01:00 [Debug] closing session
+2019-11-29 23:54:48.746 +01:00 [Debug] running BatcherImpl.Dispose(true)
+2019-11-29 23:54:48.751 +01:00 [Information] Request finished in 830.4484ms 200 application/json; charset=utf-8
+2019-11-29 23:55:04.215 +01:00 [Information] Request starting HTTP/1.1 POST https://localhost:44337/users/authenticate application/json 53
+2019-11-29 23:55:04.223 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:55:04.224 +01:00 [Debug] 1 candidate(s) found for the request path '"/users/authenticate"'
+2019-11-29 23:55:04.224 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"' with route pattern '"Users/authenticate"' is valid for the request path '"/users/authenticate"'
+2019-11-29 23:55:04.225 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"'
+2019-11-29 23:55:04.230 +01:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() inside the call to Configure(..) in the application startup code.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-29 23:55:04.360 +01:00 [Information] Request finished in 145.32500000000002ms 500 text/plain
+2019-11-29 23:55:29.902 +01:00 [Information] Request starting HTTP/1.1 POST https://localhost:44337/users/authenticate application/json 53
+2019-11-29 23:55:29.906 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:55:29.906 +01:00 [Debug] 1 candidate(s) found for the request path '"/users/authenticate"'
+2019-11-29 23:55:29.907 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"' with route pattern '"Users/authenticate"' is valid for the request path '"/users/authenticate"'
+2019-11-29 23:55:29.907 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"'
+2019-11-29 23:55:29.908 +01:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() inside the call to Configure(..) in the application startup code.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-29 23:55:29.912 +01:00 [Information] Request finished in 11.3094ms 500 text/plain
+2019-11-29 23:55:41.131 +01:00 [Information] Request starting HTTP/1.1 POST https://localhost:44337/users/authenticate application/json 53
+2019-11-29 23:55:41.133 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:55:41.135 +01:00 [Debug] 1 candidate(s) found for the request path '"/users/authenticate"'
+2019-11-29 23:55:41.136 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"' with route pattern '"Users/authenticate"' is valid for the request path '"/users/authenticate"'
+2019-11-29 23:55:41.136 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"'
+2019-11-29 23:55:41.140 +01:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() inside the call to Configure(..) in the application startup code.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-29 23:55:41.144 +01:00 [Information] Request finished in 12.9159ms 500 text/plain
+2019-11-29 23:56:15.238 +01:00 [Information] Starting up
+2019-11-29 23:56:15.850 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-11-29 23:56:15.870 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-11-29 23:56:15.872 +01:00 [Information] Bytecode provider name : "lcg"
+2019-11-29 23:56:15.875 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-11-29 23:56:15.875 +01:00 [Information] Using reflection optimizer
+2019-11-29 23:56:15.921 +01:00 [Information] Mapping class: "NhibernateApp.Models.Book" -> "Books"
+2019-11-29 23:56:15.930 +01:00 [Debug] Mapped property: Id -> Id, type: Int32
+2019-11-29 23:56:15.947 +01:00 [Debug] Mapped property: Title -> Title, type: StringClob
+2019-11-29 23:56:15.951 +01:00 [Information] Mapping class: "NhibernateApp.Models.User" -> "Users"
+2019-11-29 23:56:15.951 +01:00 [Debug] Mapped property: Id -> Id, type: Guid
+2019-11-29 23:56:15.951 +01:00 [Debug] Mapped property: FirstName -> FirstName, type: StringClob
+2019-11-29 23:56:15.952 +01:00 [Debug] Mapped property: LastName -> LastName, type: StringClob
+2019-11-29 23:56:15.952 +01:00 [Debug] Mapped property: Username -> Username, type: StringClob
+2019-11-29 23:56:15.952 +01:00 [Debug] Mapped property: Password -> Password, type: StringClob
+2019-11-29 23:56:15.952 +01:00 [Debug] Mapped property: Email -> Email, type: StringClob
+2019-11-29 23:56:15.952 +01:00 [Debug] Mapped property: Token -> Token, type: StringClob
+2019-11-29 23:56:15.966 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:15.981 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:15.983 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:56:16.003 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:56:17.101 +01:00 [Debug] Closing connection
+2019-11-29 23:56:17.114 +01:00 [Information] checking mappings queue
+2019-11-29 23:56:17.115 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:56:17.115 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:56:17.115 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:56:17.117 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:56:17.137 +01:00 [Information] checking mappings queue
+2019-11-29 23:56:17.137 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:56:17.137 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:56:17.137 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:56:17.137 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:56:17.145 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.147 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.151 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.152 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.152 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.152 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.153 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.153 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.153 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.155 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:56:17.155 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:56:17.266 +01:00 [Debug] 
+    drop table if exists Books
+2019-11-29 23:56:17.365 +01:00 [Debug] 
+    drop table if exists Users
+2019-11-29 23:56:17.446 +01:00 [Debug] 
+    create table Books (
+        Id INTEGER not null,
+       Title VARCHAR(50) not null,
+       primary key (Id)
+    )
+2019-11-29 23:56:17.561 +01:00 [Debug] 
+    create table Users (
+        Id BINARY(16) not null,
+       FirstName VARCHAR(50) not null,
+       LastName VARCHAR(50) not null,
+       Username VARCHAR(50) not null,
+       Password VARCHAR(50) not null,
+       Email VARCHAR(50) not null,
+       Token VARCHAR(50) not null,
+       primary key (Id)
+    )
+2019-11-29 23:56:17.681 +01:00 [Debug] Closing connection
+2019-11-29 23:56:17.682 +01:00 [Debug] Disposing of ConnectionProvider.
+2019-11-29 23:56:17.683 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.684 +01:00 [Information] checking mappings queue
+2019-11-29 23:56:17.684 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:56:17.684 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:56:17.684 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:56:17.684 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:56:17.701 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.719 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-11-29 23:56:17.783 +01:00 [Information] Using dialect defined converter
+2019-11-29 23:56:17.784 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-11-29 23:56:17.785 +01:00 [Information] Configuring ConnectionProvider
+2019-11-29 23:56:17.785 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-11-29 23:56:17.787 +01:00 [Information] Optimize cache for minimal puts: False
+2019-11-29 23:56:17.787 +01:00 [Information] Connection release mode: "auto"
+2019-11-29 23:56:17.787 +01:00 [Information] Default batch fetch size: 1
+2019-11-29 23:56:17.787 +01:00 [Information] echoing all SQL to stdout
+2019-11-29 23:56:17.787 +01:00 [Information] Statistics: "disabled"
+2019-11-29 23:56:17.787 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-11-29 23:56:17.788 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-11-29 23:56:17.788 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-11-29 23:56:17.790 +01:00 [Information] Query language substitutions: "{}"
+2019-11-29 23:56:17.790 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-11-29 23:56:17.791 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-11-29 23:56:17.791 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-11-29 23:56:17.791 +01:00 [Debug] Wrap result sets: "disabled"
+2019-11-29 23:56:17.791 +01:00 [Debug] Batch versioned data: "disabled"
+2019-11-29 23:56:17.792 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-11-29 23:56:17.794 +01:00 [Information] Default flush mode: Auto
+2019-11-29 23:56:17.795 +01:00 [Information] Named query checking : "enabled"
+2019-11-29 23:56:17.797 +01:00 [Debug] Track session id: enabled
+2019-11-29 23:56:17.815 +01:00 [Information] building session factory
+2019-11-29 23:56:17.815 +01:00 [Debug] Session factory constructed with filter configurations : "{}"
+2019-11-29 23:56:17.816 +01:00 [Debug] instantiating session factory with properties: "{'use_reflection_optimizer'='True', 'dialect'='NHibernate.Dialect.MySQL5Dialect, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Server=51.83.77.154;Port=32778;Database=NhibernateWebApp;User ID=root;Password=alibi23587;', 'hbm2ddl.keywords'='auto-quote', 'hbm2ddl.auto'='validate', 'show_sql'='true', 'format_sql'='true', 'use_sql_comments'='true'}"
+2019-11-29 23:56:17.817 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:56:17.922 +01:00 [Debug] Closing connection
+2019-11-29 23:56:17.924 +01:00 [Debug] initializing class SessionFactoryObjectFactory
+2019-11-29 23:56:17.924 +01:00 [Debug] registered: "d4df237612c44d0094318361119d586c"("unnamed")
+2019-11-29 23:56:17.924 +01:00 [Information] no name configured
+2019-11-29 23:56:17.990 +01:00 [Debug] "No custom" accessors found for entity: "NhibernateApp.Models.Book"
+2019-11-29 23:56:18.012 +01:00 [Debug] Create Instantiator using optimizer for:"NhibernateApp.Models.Book"
+2019-11-29 23:56:18.036 +01:00 [Debug] "No custom" accessors found for entity: "NhibernateApp.Models.User"
+2019-11-29 23:56:18.036 +01:00 [Debug] Create Instantiator using optimizer for:"NhibernateApp.Models.User"
+2019-11-29 23:56:18.081 +01:00 [Debug] Static SQL for entity: "NhibernateApp.Models.Book"
+2019-11-29 23:56:18.084 +01:00 [Debug]  Version select: ["/* get version NhibernateApp.Models.Book */ SELECT Id FROM Books WHERE Id = ", "?"]
+2019-11-29 23:56:18.085 +01:00 [Debug]  Snapshot select: ["/* get current state NhibernateApp.Models.Book */ SELECT book_.Id, book_.Title as title2_0_ FROM Books book_ WHERE book_.Id=", "?"]
+2019-11-29 23:56:18.086 +01:00 [Debug]  Insert 0: "/* insert NhibernateApp.Models.Book */ INSERT INTO Books (Title, Id) VALUES (?, ?)"
+2019-11-29 23:56:18.086 +01:00 [Debug]  Update 0: "/* update NhibernateApp.Models.Book */ UPDATE Books SET Title = ? WHERE Id = ?"
+2019-11-29 23:56:18.086 +01:00 [Debug]  Delete 0: "/* delete NhibernateApp.Models.Book */ DELETE FROM Books WHERE Id = ?"
+2019-11-29 23:56:18.126 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:56:18.128 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:56:18.128 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:56:18.128 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:56:18.129 +01:00 [Debug] Static select for entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?", " for update"]
+2019-11-29 23:56:18.132 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+MergeCascadingAction" on entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:56:18.133 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+RefreshCascadingAction" on entity "NhibernateApp.Models.Book": ["/* load NhibernateApp.Models.Book */ SELECT book0_.Id as id1_0_0_, book0_.Title as title2_0_0_ FROM Books book0_ WHERE book0_.Id=", "?"]
+2019-11-29 23:56:18.134 +01:00 [Debug] Static SQL for entity: "NhibernateApp.Models.User"
+2019-11-29 23:56:18.134 +01:00 [Debug]  Version select: ["/* get version NhibernateApp.Models.User */ SELECT Id FROM Users WHERE Id = ", "?"]
+2019-11-29 23:56:18.134 +01:00 [Debug]  Snapshot select: ["/* get current state NhibernateApp.Models.User */ SELECT user_.Id, user_.FirstName as firstname2_1_, user_.LastName as lastname3_1_, user_.Username as username4_1_, user_.Password as password5_1_, user_.Email as email6_1_, user_.Token as token7_1_ FROM Users user_ WHERE user_.Id=", "?"]
+2019-11-29 23:56:18.134 +01:00 [Debug]  Insert 0: "/* insert NhibernateApp.Models.User */ INSERT INTO Users (FirstName, LastName, Username, Password, Email, Token, Id) VALUES (?, ?, ?, ?, ?, ?, ?)"
+2019-11-29 23:56:18.134 +01:00 [Debug]  Update 0: "/* update NhibernateApp.Models.User */ UPDATE Users SET FirstName = ?, LastName = ?, Username = ?, Password = ?, Email = ?, Token = ? WHERE Id = ?"
+2019-11-29 23:56:18.134 +01:00 [Debug]  Delete 0: "/* delete NhibernateApp.Models.User */ DELETE FROM Users WHERE Id = ?"
+2019-11-29 23:56:18.134 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:56:18.135 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:56:18.135 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:56:18.135 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:56:18.135 +01:00 [Debug] Static select for entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?", " for update"]
+2019-11-29 23:56:18.135 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+MergeCascadingAction" on entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:56:18.136 +01:00 [Debug] Static select for action "NHibernate.Engine.CascadingAction+RefreshCascadingAction" on entity "NhibernateApp.Models.User": ["/* load NhibernateApp.Models.User */ SELECT user0_.Id as id1_1_0_, user0_.FirstName as firstname2_1_0_, user0_.LastName as lastname3_1_0_, user0_.Username as username4_1_0_, user0_.Password as password5_1_0_, user0_.Email as email6_1_0_, user0_.Token as token7_1_0_ FROM Users user0_ WHERE user0_.Id=", "?"]
+2019-11-29 23:56:18.136 +01:00 [Debug] Instantiated session factory
+2019-11-29 23:56:18.137 +01:00 [Information] Running schema validator
+2019-11-29 23:56:18.137 +01:00 [Information] fetching database metadata
+2019-11-29 23:56:18.137 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:56:18.251 +01:00 [Information] checking mappings queue
+2019-11-29 23:56:18.252 +01:00 [Information] processing one-to-many association mappings
+2019-11-29 23:56:18.252 +01:00 [Information] processing one-to-one association property references
+2019-11-29 23:56:18.252 +01:00 [Information] processing foreign key constraints
+2019-11-29 23:56:18.252 +01:00 [Information] processing filters (second pass)
+2019-11-29 23:56:18.402 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-11-29 23:56:18.403 +01:00 [Information] columns: "Id, Title"
+2019-11-29 23:56:18.528 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-11-29 23:56:18.529 +01:00 [Information] columns: "Id, FirstName, LastName, Username, Password, Email, Token"
+2019-11-29 23:56:18.529 +01:00 [Debug] Closing connection
+2019-11-29 23:56:18.533 +01:00 [Debug] Checking 0 named HQL queries
+2019-11-29 23:56:18.534 +01:00 [Debug] Checking 0 named SQL queries
+2019-11-29 23:56:18.705 +01:00 [Debug] Hosting starting
+2019-11-29 23:56:18.738 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-29 23:56:18.748 +01:00 [Debug] Reading data from file '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys\key-dc9eb012-948e-46c8-afec-bf899bb315a1.xml"'.
+2019-11-29 23:56:18.754 +01:00 [Debug] Found key {dc9eb012-948e-46c8-afec-bf899bb315a1}.
+2019-11-29 23:56:18.769 +01:00 [Debug] Considering key {dc9eb012-948e-46c8-afec-bf899bb315a1} with expiration date 2020-02-08 17:27:50Z as default key.
+2019-11-29 23:56:18.782 +01:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-11-29 23:56:18.784 +01:00 [Debug] Decrypting secret element using Windows DPAPI.
+2019-11-29 23:56:18.785 +01:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-11-29 23:56:18.788 +01:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2019-11-29 23:56:18.790 +01:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2019-11-29 23:56:18.798 +01:00 [Debug] Using key {dc9eb012-948e-46c8-afec-bf899bb315a1} as the default key.
+2019-11-29 23:56:18.799 +01:00 [Debug] Key ring with default key {dc9eb012-948e-46c8-afec-bf899bb315a1} was loaded during application startup.
+2019-11-29 23:56:18.964 +01:00 [Debug] Loaded hosting startup assembly "NhibernateApp"
+2019-11-29 23:56:18.964 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-11-29 23:56:18.964 +01:00 [Information] Hosting environment: "Development"
+2019-11-29 23:56:18.964 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-11-29 23:56:18.965 +01:00 [Debug] Hosting started
+2019-11-29 23:56:19.011 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-11-29 23:56:19.011 +01:00 [Information] Request starting HTTP/1.1 POST https://localhost:44337/users/authenticate application/json 53
+2019-11-29 23:56:19.015 +01:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2019-11-29 23:56:19.015 +01:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2019-11-29 23:56:19.106 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:56:19.106 +01:00 [Debug] AuthenticationScheme: "Bearer" was not authenticated.
+2019-11-29 23:56:19.151 +01:00 [Debug] 1 candidate(s) found for the request path '"/api/book/populate"'
+2019-11-29 23:56:19.151 +01:00 [Debug] 1 candidate(s) found for the request path '"/users/authenticate"'
+2019-11-29 23:56:19.156 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"' with route pattern '"Users/authenticate"' is valid for the request path '"/users/authenticate"'
+2019-11-29 23:56:19.156 +01:00 [Debug] Endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"' with route pattern '"api/Book/Populate"' is valid for the request path '"/api/book/populate"'
+2019-11-29 23:56:19.157 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:56:19.157 +01:00 [Debug] Request matched endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"'
+2019-11-29 23:56:19.157 +01:00 [Information] Executing endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:56:19.157 +01:00 [Information] Executing endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"'
+2019-11-29 23:56:19.168 +01:00 [Debug] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2019-11-29 23:56:19.185 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "NhibernateApp.Models.Book Populate()" on controller "NhibernateApp.Controllers.BookController" ("NhibernateApp").
+2019-11-29 23:56:19.186 +01:00 [Debug] Execution plan of "authorization" filters (in the following order): ["None"]
+2019-11-29 23:56:19.186 +01:00 [Debug] Execution plan of "resource" filters (in the following order): ["None"]
+2019-11-29 23:56:19.186 +01:00 [Debug] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2019-11-29 23:56:19.187 +01:00 [Debug] Execution plan of "exception" filters (in the following order): ["None"]
+2019-11-29 23:56:19.187 +01:00 [Debug] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2019-11-29 23:56:19.188 +01:00 [Debug] Executing controller factory for controller "NhibernateApp.Controllers.BookController" ("NhibernateApp")
+2019-11-29 23:56:19.189 +01:00 [Debug] Opening Hibernate Session.
+2019-11-29 23:56:19.190 +01:00 [Information] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(NhibernateApp.Models.AuthenticateModel)" on controller "NhibernateApp.Controllers.UsersController" ("NhibernateApp").
+2019-11-29 23:56:19.190 +01:00 [Debug] Execution plan of "authorization" filters (in the following order): ["None"]
+2019-11-29 23:56:19.191 +01:00 [Debug] Execution plan of "resource" filters (in the following order): ["None"]
+2019-11-29 23:56:19.191 +01:00 [Debug] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2019-11-29 23:56:19.191 +01:00 [Debug] Execution plan of "exception" filters (in the following order): ["None"]
+2019-11-29 23:56:19.192 +01:00 [Debug] Execution plan of "result" filters (in the following order): ["None"]
+2019-11-29 23:56:19.192 +01:00 [Debug] Executing controller factory for controller "NhibernateApp.Controllers.UsersController" ("NhibernateApp")
+2019-11-29 23:56:19.197 +01:00 [Debug] Executed controller factory for controller "NhibernateApp.Controllers.UsersController" ("NhibernateApp")
+2019-11-29 23:56:19.215 +01:00 [Debug] Attempting to bind parameter '"model"' of type '"NhibernateApp.Models.AuthenticateModel"' ...
+2019-11-29 23:56:19.216 +01:00 [Debug] [session-id=263a6e17-fb32-4bde-a427-017a3d692c9b] opened session at timestamp: 637106685791, for session factory: [null/"d4df237612c44d0094318361119d586c"]
+2019-11-29 23:56:19.218 +01:00 [Debug] Attempting to bind parameter '"model"' of type '"NhibernateApp.Models.AuthenticateModel"' using the name '""' in request data ...
+2019-11-29 23:56:19.219 +01:00 [Debug] Executed controller factory for controller "NhibernateApp.Controllers.BookController" ("NhibernateApp")
+2019-11-29 23:56:19.219 +01:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter"' for content type '"application/json"'.
+2019-11-29 23:56:19.223 +01:00 [Debug] Begin (Unspecified)
+2019-11-29 23:56:19.223 +01:00 [Debug] Obtaining DbConnection from Driver
+2019-11-29 23:56:19.238 +01:00 [Debug] JSON input formatter succeeded, deserializing to type '"NhibernateApp.Models.AuthenticateModel"'
+2019-11-29 23:56:19.238 +01:00 [Debug] Done attempting to bind parameter '"model"' of type '"NhibernateApp.Models.AuthenticateModel"'.
+2019-11-29 23:56:19.238 +01:00 [Debug] Done attempting to bind parameter '"model"' of type '"NhibernateApp.Models.AuthenticateModel"'.
+2019-11-29 23:56:19.239 +01:00 [Debug] Attempting to validate the bound parameter '"model"' of type '"NhibernateApp.Models.AuthenticateModel"' ...
+2019-11-29 23:56:19.250 +01:00 [Debug] Done attempting to validate the bound parameter '"model"' of type '"NhibernateApp.Models.AuthenticateModel"'.
+2019-11-29 23:56:20.761 +01:00 [Debug] unsaved-value: 0
+2019-11-29 23:56:20.762 +01:00 [Debug] transient instance of: "NhibernateApp.Models.Book"
+2019-11-29 23:56:20.762 +01:00 [Debug] saving transient instance
+2019-11-29 23:56:20.764 +01:00 [Debug] fetching initial value: ["select max(Id) from Books"]
+2019-11-29 23:56:20.766 +01:00 [Debug] Opened new DbCommand, open DbCommands: 1
+2019-11-29 23:56:20.766 +01:00 [Debug] Building an DbCommand object for the SqlString: ["select max(Id) from Books"]
+2019-11-29 23:56:20.772 +01:00 [Debug] 
+    select
+        max(Id) 
+    from
+        Books
+2019-11-29 23:56:20.773 +01:00 [Debug] Enlist Command
+2019-11-29 23:56:20.796 +01:00 [Debug] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2019-11-29 23:56:20.799 +01:00 [Debug] No information found on request to perform content negotiation.
+2019-11-29 23:56:20.799 +01:00 [Debug] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2019-11-29 23:56:20.799 +01:00 [Debug] Attempting to select the first formatter in the output formatters list which can write the result.
+2019-11-29 23:56:20.800 +01:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+2019-11-29 23:56:20.800 +01:00 [Information] Executing ObjectResult, writing value of type '"NhibernateApp.Models.User"'.
+2019-11-29 23:56:20.824 +01:00 [Information] Executed action "NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)" in 1627.1087ms
+2019-11-29 23:56:20.826 +01:00 [Information] Executed endpoint '"NhibernateApp.Controllers.UsersController.Authenticate (NhibernateApp)"'
+2019-11-29 23:56:20.827 +01:00 [Debug] ExecuteReader took 53 ms
+2019-11-29 23:56:20.828 +01:00 [Debug] Opened DbDataReader, open DbDataReaders: 1
+2019-11-29 23:56:20.829 +01:00 [Debug] first free id: 1
+2019-11-29 23:56:20.831 +01:00 [Debug] Closed DbDataReader, open DbDataReaders :0
+2019-11-29 23:56:20.831 +01:00 [Debug] DataReader was closed after 57 ms
+2019-11-29 23:56:20.832 +01:00 [Debug] Closed DbCommand, open DbCommands: 0
+2019-11-29 23:56:20.833 +01:00 [Information] Request finished in 1827.0945000000002ms 200 application/json; charset=utf-8
+2019-11-29 23:56:20.834 +01:00 [Debug] generated identifier: "1", using strategy: "NHibernate.Id.IncrementGenerator"
+2019-11-29 23:56:20.835 +01:00 [Debug] saving "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:56:20.870 +01:00 [Debug] Start Commit
+2019-11-29 23:56:20.871 +01:00 [Debug] before transaction completion
+2019-11-29 23:56:20.873 +01:00 [Debug] flushing session
+2019-11-29 23:56:20.875 +01:00 [Debug] processing flush-time cascades
+2019-11-29 23:56:20.878 +01:00 [Debug] dirty checking collections
+2019-11-29 23:56:20.879 +01:00 [Debug] Flushing entities and processing referenced collections
+2019-11-29 23:56:20.888 +01:00 [Debug] Processing unreferenced collections
+2019-11-29 23:56:20.889 +01:00 [Debug] Scheduling collection removes/(re)creates/updates
+2019-11-29 23:56:20.889 +01:00 [Debug] Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2019-11-29 23:56:20.890 +01:00 [Debug] Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2019-11-29 23:56:20.892 +01:00 [Debug] listing entities:
+2019-11-29 23:56:20.894 +01:00 [Debug] NhibernateApp.Models.Book{'Id'='1', 'Title'='book text matter'}
+2019-11-29 23:56:20.894 +01:00 [Debug] executing flush
+2019-11-29 23:56:20.895 +01:00 [Debug] Registering flush begin
+2019-11-29 23:56:20.899 +01:00 [Debug] Inserting entity: "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:56:20.904 +01:00 [Debug] Opened new DbCommand, open DbCommands: 1
+2019-11-29 23:56:20.904 +01:00 [Debug] Building an DbCommand object for the SqlString: ["/* insert NhibernateApp.Models.Book */ INSERT INTO Books (Title, Id) VALUES (", "?", ", ", "?", ")"]
+2019-11-29 23:56:20.905 +01:00 [Debug] Dehydrating entity: "[NhibernateApp.Models.Book#1]"
+2019-11-29 23:56:20.906 +01:00 [Debug] binding '"book text matter"' to parameter: 0
+2019-11-29 23:56:20.909 +01:00 [Debug] binding '"1"' to parameter: 1
+2019-11-29 23:56:20.911 +01:00 [Debug] 
+    /* insert NhibernateApp.Models.Book
+        */ INSERT 
+        INTO
+            Books
+            (Title, Id) 
+        VALUES
+            (?p0, ?p1);
+    ?p0 = 'book text matter' [Type: String (16:0:0)], ?p1 = 1 [Type: Int32 (0:0:0)]
+2019-11-29 23:56:20.911 +01:00 [Debug] Enlist Command
+2019-11-29 23:56:20.965 +01:00 [Debug] ExecuteNonQuery took 53 ms
+2019-11-29 23:56:20.968 +01:00 [Debug] ExecuteBatch for 1 statements took 0 ms
+2019-11-29 23:56:20.968 +01:00 [Debug] Closed DbCommand, open DbCommands: 0
+2019-11-29 23:56:20.969 +01:00 [Debug] Registering flush end
+2019-11-29 23:56:20.974 +01:00 [Debug] post flush
+2019-11-29 23:56:21.040 +01:00 [Debug] DbTransaction Committed
+2019-11-29 23:56:21.041 +01:00 [Debug] Aggressively releasing database connection
+2019-11-29 23:56:21.042 +01:00 [Debug] Closing connection
+2019-11-29 23:56:21.042 +01:00 [Debug] transaction completion
+2019-11-29 23:56:21.046 +01:00 [Debug] DbTransaction disposed.
+2019-11-29 23:56:21.047 +01:00 [Debug] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2019-11-29 23:56:21.048 +01:00 [Debug] No information found on request to perform content negotiation.
+2019-11-29 23:56:21.048 +01:00 [Debug] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2019-11-29 23:56:21.048 +01:00 [Debug] Attempting to select the first formatter in the output formatters list which can write the result.
+2019-11-29 23:56:21.049 +01:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+2019-11-29 23:56:21.049 +01:00 [Information] Executing ObjectResult, writing value of type '"NhibernateApp.Models.Book"'.
+2019-11-29 23:56:21.051 +01:00 [Information] Executed action "NhibernateApp.Controllers.BookController.Populate (NhibernateApp)" in 1863.9818ms
+2019-11-29 23:56:21.051 +01:00 [Information] Executed endpoint '"NhibernateApp.Controllers.BookController.Populate (NhibernateApp)"'
+2019-11-29 23:56:21.052 +01:00 [Debug] [session-id=263a6e17-fb32-4bde-a427-017a3d692c9b] running ISession.Dispose()
+2019-11-29 23:56:21.053 +01:00 [Debug] [session-id=263a6e17-fb32-4bde-a427-017a3d692c9b] executing real Dispose(True)
+2019-11-29 23:56:21.053 +01:00 [Debug] closing session
+2019-11-29 23:56:21.054 +01:00 [Debug] running BatcherImpl.Dispose(true)
+2019-11-29 23:56:21.058 +01:00 [Information] Request finished in 2052.8834ms 200 application/json; charset=utf-8

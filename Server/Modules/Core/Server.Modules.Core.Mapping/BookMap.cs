@@ -1,11 +1,11 @@
 ﻿using NHibernate;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
-using NhibernateApp.Models;
+using Server.Modules.Core.Common.Models;
 
-namespace NhibernateApp.Mapping
+namespace Server.Modules.Core.Mapping
 {
-    public class BookMap : ClassMapping<Book>//AuditableBaseMap<Book>
+    public class BookMap : ClassMapping<Book>, IMap
     {
         public BookMap()
         {

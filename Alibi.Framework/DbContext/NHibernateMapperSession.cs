@@ -1,8 +1,7 @@
 ﻿using NHibernate;
-using NhibernateApp.Models;
 using System.Linq;
 
-namespace NhibernateApp.DbContext
+namespace Alibi.Framework.DbContext
 {
     public class NHibernateMapperSession<T> : IMapperSession<T>
     {

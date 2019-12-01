@@ -1,9 +1,7 @@
-﻿using NHibernate;
-using NhibernateApp.DbContext;
-using NhibernateApp.Models;
-using System;
+﻿using Alibi.Framework.DbContext;
+using NHibernate;
 
-namespace NhibernateApp.Business
+namespace Alibi.Framework.Business
 {
     public class BaseBusiness<T> : NHibernateMapperSession<T> where T : class
     {

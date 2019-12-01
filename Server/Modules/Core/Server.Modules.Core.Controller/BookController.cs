@@ -1,13 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using NhibernateApp.Business;
-using NhibernateApp.Models;
+using Server.Modules.Core.Common.Interfaces;
+using Server.Modules.Core.Common.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace NhibernateApp.Controllers
+namespace Server.Modules.Core.Controllers
 {
     [ApiController]
     //[Authorize]

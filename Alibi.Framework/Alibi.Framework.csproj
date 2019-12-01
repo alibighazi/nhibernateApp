@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
@@ -19,15 +20,5 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Alibi.Framework\Alibi.Framework.csproj" />
-    <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core.Controller\Server.Modules.Core.Controller.csproj" />
-    <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core.Mapping\Server.Modules.Core.Mapping.csproj" />
-    <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core.Test\Server.Modules.Core.Test.csproj" />
-    <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core\Server.Modules.Core.csproj" />
-  </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" appsettings_1development_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
-
+  
 </Project>

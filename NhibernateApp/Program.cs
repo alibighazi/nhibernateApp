@@ -1,3 +1,4 @@
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -12,6 +13,7 @@ namespace NhibernateApp
 
         public static void Main(string[] args)
         {
+           
 
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.Development.json")
@@ -46,7 +48,7 @@ namespace NhibernateApp
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSerilog()
-
+                .UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

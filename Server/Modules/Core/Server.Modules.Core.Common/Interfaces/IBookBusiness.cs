@@ -1,7 +1,7 @@
-﻿using NhibernateApp.Models;
+﻿using Server.Modules.Core.Common.Models;
 using System.Collections.Generic;
 
-namespace NhibernateApp.Business
+namespace Server.Modules.Core.Common.Interfaces
 {
     public interface IBookBusiness
     {

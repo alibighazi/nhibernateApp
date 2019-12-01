@@ -1,19 +1,31 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Alibi.Framework.Interfaces;
+using Autofac;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Cfg.MappingSchema;
 using NHibernate.Mapping.ByCode;
+using NHibernate.Tool.hbm2ddl;
 using NHibernate.Type;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
-namespace NhibernateApp.DbContext
+namespace Alibi.Framework.DbContext
 {
     public static class NHibernateExtensions
     {
-        public static IServiceCollection AddNHibernate(this IServiceCollection services, string connectionString)
+        public static ContainerBuilder AddNHibernate(this ContainerBuilder builder, string connectionString, IList<string> mappingsAssembly)
         {
             var mapper = new ModelMapper();
             mapper.AddMappings(typeof(NHibernateExtensions).Assembly.ExportedTypes);
+
+            foreach (var item in mappingsAssembly)
+            {
+                var assembly = Assembly.Load(item);
+                mapper.AddMappings(assembly.GetExportedTypes());
+            }
+            
             HbmMapping domainMapping = mapper.CompileMappingForAllExplicitlyAddedEntities();
 
             var configuration = new Configuration();
@@ -31,17 +43,24 @@ namespace NhibernateApp.DbContext
             });
 
             configuration.AddMapping(domainMapping);
-            //var exporter = new SchemaExport(configuration);
-            //exporter.Execute(true, true, false);
+            var exporter = new SchemaExport(configuration);
+            exporter.Execute(true, true, false);
+
+
 
             var sessionFactory = configuration.BuildSessionFactory().WithOptions();
 
-            sessionFactory.Interceptor(new AuditInterceptor());
+            //sessionFactory.Interceptor(new AuditInterceptor());
 
-            services.AddSingleton(sessionFactory);
-            services.AddScoped(factory => sessionFactory.OpenSession());
+            builder.Register(c => sessionFactory)
+                .As<ISessionBuilder>()
+                .SingleInstance();
 
-            return services;
+            builder.Register(c => c.Resolve<ISessionBuilder>().OpenSession()).As<ISession>().InstancePerLifetimeScope();
+
+
+            builder.RegisterInstance<ISessionBuilder>(sessionFactory);
+            return builder;
         }
     }
 
@@ -53,7 +72,6 @@ namespace NhibernateApp.DbContext
 
 
 
-    public interface IAuditable { }
 
 
     public class AuditInterceptor : EmptyInterceptor

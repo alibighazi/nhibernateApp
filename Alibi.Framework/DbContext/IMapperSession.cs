@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace NhibernateApp.DbContext
+namespace Alibi.Framework.DbContext
 {
     public interface IMapperSession<T>
     {

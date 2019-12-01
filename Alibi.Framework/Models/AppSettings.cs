@@ -1,4 +1,4 @@
-﻿namespace NhibernateApp.Models
+﻿namespace Alibi.Framework.Models
 {
 
     /*
