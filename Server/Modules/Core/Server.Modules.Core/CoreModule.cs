@@ -1,10 +1,8 @@
-﻿using Alibi.Framework.DbContext;
+﻿using Alibi.Framework.Interceptor;
 using Autofac;
+using Autofac.Extras.DynamicProxy;
 using Server.Modules.Core.Business;
 using Server.Modules.Core.Common.Interfaces;
-using Server.Modules.Core.Common.Models;
-using Server.Modules.Core.Mapping;
-using System.Reflection;
 
 namespace Server.Modules.Core
 {
@@ -21,13 +19,10 @@ namespace Server.Modules.Core
             //    .As<IValuesService>()
             //    .InstancePerLifetimeScope();
 
-            builder.RegisterType<BookBusiness>().As<IBookBusiness>();
-            builder.RegisterType<BookMap>().As<IMap>();
-            builder.RegisterType<NHibernateMapperSession<Book>>().As<IMapperSession<Book>>();
-
-            Assembly.Load("Server.Modules.Core.Mapping");
+            builder.RegisterType<BookBusiness>().As<IBookBusiness>()
+                .InstancePerLifetimeScope()
+                .EnableInterfaceInterceptors()
+                .InterceptedBy(typeof(TransactionInterceptor));
         }
-
-
     }
 }

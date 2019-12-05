@@ -64,10 +64,12 @@ namespace NhibernateApp
                 .AllowAnyMethod()
                 .AllowAnyHeader());
 
-
-            app.UseAuthentication();
             app.UseAuthorization();
+            app.UseAuthentication();
             app.UseHttpsRedirection();
+
+
+                
 
             app.UseRouting();
 

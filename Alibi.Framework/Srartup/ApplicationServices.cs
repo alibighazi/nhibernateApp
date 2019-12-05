@@ -36,7 +36,9 @@ namespace Alibi.Framework.Srartup
             })
             .AddJwtBearer(x =>
             {
+#if DEBUG
                 x.RequireHttpsMetadata = false;
+#endif
                 x.SaveToken = true;
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -47,6 +49,8 @@ namespace Alibi.Framework.Srartup
                 };
             });
 
+
+            services.AddAuthorization();
             return services;
         }
 
@@ -54,6 +58,9 @@ namespace Alibi.Framework.Srartup
         {
 
             #region -- load autofac modules ---------------------------
+
+            builder.RegisterModule(new FrameworkModule());
+
             var type = typeof(Module);
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(s => s.GetTypes())

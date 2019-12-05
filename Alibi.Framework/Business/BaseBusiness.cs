@@ -1,15 +1,6 @@
-﻿using Alibi.Framework.DbContext;
-using NHibernate;
-
-namespace Alibi.Framework.Business
+﻿namespace Alibi.Framework.Business
 {
-    public class BaseBusiness<T> : NHibernateMapperSession<T> where T : class
+    public class BaseBusiness<T>
     {
-        public BaseBusiness(ISession session) : base(session)
-        {
-        }
-
-        
-
     }
 }

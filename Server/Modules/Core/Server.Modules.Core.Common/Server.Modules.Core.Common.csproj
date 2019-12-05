@@ -10,4 +10,8 @@
     </VisualStudio>
   </ProjectExtensions>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Alibi.Framework\Alibi.Framework.csproj" />
+  </ItemGroup>
+
 </Project>

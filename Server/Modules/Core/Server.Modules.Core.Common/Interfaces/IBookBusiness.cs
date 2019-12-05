@@ -8,7 +8,7 @@ namespace Server.Modules.Core.Common.Interfaces
 
         IEnumerable<Book> ListBooks();
 
-        Book SaveBook(Book book);
+        void SaveBook(Book book);
 
     }
 }

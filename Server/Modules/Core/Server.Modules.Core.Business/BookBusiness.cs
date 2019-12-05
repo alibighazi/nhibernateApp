@@ -1,46 +1,52 @@
 ﻿using Alibi.Framework.DbContext;
 using Server.Modules.Core.Common.Interfaces;
 using Server.Modules.Core.Common.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Server.Modules.Core.Business
 {
     public class BookBusiness : IBookBusiness
     {
-        private IMapperSession<Book> _session;
-        public BookBusiness(IMapperSession<Book> session)
+        private IRepository<Book> _repository;
+        public BookBusiness(IRepository<Book> repository)
         {
-            _session = session;
+            _repository = repository;
         }
 
         public IEnumerable<Book> ListBooks()
         {
-            return _session.Books.ToList();
+            return _repository.All();
         }
 
-        public Book SaveBook(Book book)
+        public Book BookById(int id)
         {
+            var a = _repository.Count();
+            var aa = _repository.List<string>(w => w.Id > 0, ww => ww.Title, true);
+            _repository.Delete(x => x.Id == id);
+            return _repository.FirstOrDefault();
+        }
+
+        public void SaveBook(Book book)
+        {
+            _repository.BeginTransaction();
             try
             {
-                _session.BeginTransaction();
+                _repository.Save(book);
+                _repository.CommitTransaction();
 
-                var entity = _session.Save(book);
-
-                _session.Commit();
-
-                _session.CloseTransaction();
-
-
-                return entity;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-
-                return null;
+                _repository.RollbackTransaction();
+                throw ex;
             }
-
-
+            finally
+            {
+                _repository.CloseTransaction();
+                _repository.CloseSession();
+                _repository.Dispose();
+            }
         }
     }
 }

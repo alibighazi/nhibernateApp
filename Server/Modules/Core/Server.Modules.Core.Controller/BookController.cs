@@ -1,15 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Server.Modules.Core.Common.Interfaces;
 using Server.Modules.Core.Common.Models;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Server.Modules.Core.Controllers
 {
+    [Authorize]
     [ApiController]
-    //[Authorize]
     [Route("api/[controller]")]
     public class BookController : ControllerBase
     {
@@ -25,34 +25,31 @@ namespace Server.Modules.Core.Controllers
         }
 
         [HttpGet]
-        public Task<IEnumerable<Book>> Get()
+        public IEnumerable<Book> Get()
         {
 
             var books = _bookBusiness.ListBooks();
             _logger.LogInformation("books list {books}", JsonConvert.SerializeObject(books));
-            return Task.FromResult<IEnumerable<Book>>(books);
+            return books;
         }
 
 
         [HttpGet]
         [Route("Populate")]
-        public Book Populate()
+        public void Populate()
         {
-
             var b = new Book
             {
                 Title = "book text matter"
             };
-
-            
-            return _bookBusiness.SaveBook(b);
+            _bookBusiness.SaveBook(b);
         }
 
 
 
         [HttpGet]
         [Route("Update")]
-        public Book Update()
+        public void Update()
         {
 
             var b = new Book
@@ -62,7 +59,7 @@ namespace Server.Modules.Core.Controllers
             };
 
             
-            return _bookBusiness.SaveBook(b);
+            _bookBusiness.SaveBook(b);
         }
     }
 }

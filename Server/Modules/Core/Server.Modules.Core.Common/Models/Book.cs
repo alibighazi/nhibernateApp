@@ -1,9 +1,9 @@
-﻿namespace Server.Modules.Core.Common.Models
-{
-    public class Book //: IAuditable
-    {
+﻿using Alibi.Framework.Models;
 
-        public virtual int Id { get; set; }
+namespace Server.Modules.Core.Common.Models
+{
+    public class Book : BaseModel<int>
+    {
         public virtual string Title { get; set; }
     }
 }
