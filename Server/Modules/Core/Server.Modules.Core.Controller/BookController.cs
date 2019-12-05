@@ -19,6 +19,7 @@ namespace Server.Modules.Core.Controllers
 
         public BookController(ILogger<Book> logger, IBookBusiness bookBusiness)
         {
+
             _logger = logger;
             _bookBusiness = bookBusiness;
             

@@ -51,7 +51,7 @@ namespace Alibi.Framework.DbContext
         public void Save(T entity)
         {
             _session.SaveOrUpdate(entity);
-            _session.Flush();
+            //_session.Flush();
         }
         public void Save(IEnumerable<T> entities)
         {

@@ -1,0 +1,469 @@
+2019-12-06 00:11:56.951 +01:00 [Information] Starting up
+2019-12-06 00:11:59.899 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-12-06 00:11:59.912 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-12-06 00:11:59.914 +01:00 [Information] Bytecode provider name : "lcg"
+2019-12-06 00:11:59.916 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-12-06 00:11:59.916 +01:00 [Information] Using reflection optimizer
+2019-12-06 00:11:59.950 +01:00 [Information] Mapping class: "Alibi.Framework.Models.UserModel" -> "Users"
+2019-12-06 00:11:59.982 +01:00 [Information] Mapping class: "Server.Modules.Core.Common.Models.Book" -> "Books"
+2019-12-06 00:11:59.990 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:00.003 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:00.005 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:12:01.222 +01:00 [Information] checking mappings queue
+2019-12-06 00:12:01.222 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:12:01.222 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:12:01.222 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:12:01.225 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:12:01.239 +01:00 [Information] checking mappings queue
+2019-12-06 00:12:01.239 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:12:01.239 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:12:01.239 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:12:01.239 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:12:01.246 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.247 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.250 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.250 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.251 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.251 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.254 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.254 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:01.255 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:12:02.060 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:02.061 +01:00 [Information] checking mappings queue
+2019-12-06 00:12:02.061 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:12:02.061 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:12:02.061 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:12:02.061 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:12:02.076 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:02.088 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:12:02.146 +01:00 [Information] Using dialect defined converter
+2019-12-06 00:12:02.147 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-12-06 00:12:02.147 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:12:02.148 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-12-06 00:12:02.149 +01:00 [Information] Optimize cache for minimal puts: False
+2019-12-06 00:12:02.149 +01:00 [Information] Connection release mode: "auto"
+2019-12-06 00:12:02.149 +01:00 [Information] Default batch fetch size: 1
+2019-12-06 00:12:02.149 +01:00 [Information] echoing all SQL to stdout
+2019-12-06 00:12:02.149 +01:00 [Information] Statistics: "disabled"
+2019-12-06 00:12:02.149 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-12-06 00:12:02.150 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-12-06 00:12:02.150 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-12-06 00:12:02.152 +01:00 [Information] Query language substitutions: "{}"
+2019-12-06 00:12:02.152 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:12:02.153 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-12-06 00:12:02.153 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-12-06 00:12:02.153 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:12:02.154 +01:00 [Information] Default flush mode: Auto
+2019-12-06 00:12:02.154 +01:00 [Information] Named query checking : "enabled"
+2019-12-06 00:12:02.166 +01:00 [Information] building session factory
+2019-12-06 00:12:02.263 +01:00 [Information] no name configured
+2019-12-06 00:12:02.422 +01:00 [Information] Running schema validator
+2019-12-06 00:12:02.422 +01:00 [Information] fetching database metadata
+2019-12-06 00:12:02.547 +01:00 [Information] checking mappings queue
+2019-12-06 00:12:02.547 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:12:02.547 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:12:02.547 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:12:02.547 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:12:02.687 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-12-06 00:12:02.688 +01:00 [Information] columns: "id, Username, Password, Token, Firstname, Lastname"
+2019-12-06 00:12:02.833 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-12-06 00:12:02.833 +01:00 [Information] columns: "Id, Title"
+2019-12-06 00:12:03.010 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-06 00:12:03.259 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-12-06 00:12:03.259 +01:00 [Information] Hosting environment: "Development"
+2019-12-06 00:12:03.260 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-12-06 00:12:03.294 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-12-06 00:12:03.294 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337//  
+2019-12-06 00:12:03.521 +01:00 [Information] Request finished in 228.18040000000002ms 0 
+2019-12-06 00:12:03.527 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:12:03.552 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "Void Populate()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:12:15.824 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)" in 12263.9927ms
+2019-12-06 00:12:15.824 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:12:15.840 +01:00 [Information] Request finished in 12547.843700000001ms 200 
+2019-12-06 00:12:18.505 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/  
+2019-12-06 00:12:18.511 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)"'
+2019-12-06 00:12:18.514 +01:00 [Information] Route matched with "{action = \"Get\", controller = \"Book\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[Server.Modules.Core.Common.Models.Book] Get()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:12:20.596 +01:00 [Information] books list "[{\"Title\":\"book text matter\",\"Id\":1}]"
+2019-12-06 00:12:20.606 +01:00 [Information] Executing ObjectResult, writing value of type '"NHibernate.Linq.NhQueryable`1[[Server.Modules.Core.Common.Models.Book, Server.Modules.Core.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-12-06 00:12:20.775 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)" in 2260.5842000000002ms
+2019-12-06 00:12:20.776 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)"'
+2019-12-06 00:12:20.777 +01:00 [Information] Request finished in 2271.9236ms 200 application/json; charset=utf-8
+2019-12-06 00:14:07.812 +01:00 [Information] Starting up
+2019-12-06 00:14:09.092 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-12-06 00:14:09.115 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-12-06 00:14:09.119 +01:00 [Information] Bytecode provider name : "lcg"
+2019-12-06 00:14:09.122 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-12-06 00:14:09.122 +01:00 [Information] Using reflection optimizer
+2019-12-06 00:14:09.169 +01:00 [Information] Mapping class: "Alibi.Framework.Models.UserModel" -> "Users"
+2019-12-06 00:14:09.208 +01:00 [Information] Mapping class: "Server.Modules.Core.Common.Models.Book" -> "Books"
+2019-12-06 00:14:09.220 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:09.235 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:09.236 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:14:10.313 +01:00 [Information] checking mappings queue
+2019-12-06 00:14:10.313 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:14:10.313 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:14:10.313 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:14:10.316 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:14:10.334 +01:00 [Information] checking mappings queue
+2019-12-06 00:14:10.334 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:14:10.334 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:14:10.334 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:14:10.334 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:14:10.340 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.341 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.345 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.345 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.345 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.346 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.350 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.351 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.353 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:14:10.859 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.860 +01:00 [Information] checking mappings queue
+2019-12-06 00:14:10.860 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:14:10.860 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:14:10.860 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:14:10.860 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:14:10.873 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.887 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:14:10.936 +01:00 [Information] Using dialect defined converter
+2019-12-06 00:14:10.937 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-12-06 00:14:10.937 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:14:10.937 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-12-06 00:14:10.938 +01:00 [Information] Optimize cache for minimal puts: False
+2019-12-06 00:14:10.939 +01:00 [Information] Connection release mode: "auto"
+2019-12-06 00:14:10.939 +01:00 [Information] Default batch fetch size: 1
+2019-12-06 00:14:10.939 +01:00 [Information] echoing all SQL to stdout
+2019-12-06 00:14:10.939 +01:00 [Information] Statistics: "disabled"
+2019-12-06 00:14:10.939 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-12-06 00:14:10.939 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-12-06 00:14:10.940 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-12-06 00:14:10.942 +01:00 [Information] Query language substitutions: "{}"
+2019-12-06 00:14:10.942 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:14:10.942 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-12-06 00:14:10.943 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-12-06 00:14:10.943 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:14:10.944 +01:00 [Information] Default flush mode: Auto
+2019-12-06 00:14:10.944 +01:00 [Information] Named query checking : "enabled"
+2019-12-06 00:14:10.956 +01:00 [Information] building session factory
+2019-12-06 00:14:11.060 +01:00 [Information] no name configured
+2019-12-06 00:14:11.235 +01:00 [Information] Running schema validator
+2019-12-06 00:14:11.235 +01:00 [Information] fetching database metadata
+2019-12-06 00:14:11.370 +01:00 [Information] checking mappings queue
+2019-12-06 00:14:11.371 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:14:11.371 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:14:11.371 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:14:11.371 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:14:11.540 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-12-06 00:14:11.541 +01:00 [Information] columns: "id, Username, Password, Token, Firstname, Lastname"
+2019-12-06 00:14:11.696 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-12-06 00:14:11.697 +01:00 [Information] columns: "Id, Title"
+2019-12-06 00:14:11.844 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-06 00:14:12.029 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-12-06 00:14:12.029 +01:00 [Information] Hosting environment: "Development"
+2019-12-06 00:14:12.029 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-12-06 00:14:12.073 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337//  
+2019-12-06 00:14:12.073 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-12-06 00:14:12.182 +01:00 [Information] Request finished in 110.2928ms 0 
+2019-12-06 00:14:12.186 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:14:12.207 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "Void Populate()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:14:15.588 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)" in 3374.9818ms
+2019-12-06 00:14:15.589 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:14:15.602 +01:00 [Information] Request finished in 3532.2201ms 200 
+2019-12-06 00:14:17.804 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/  
+2019-12-06 00:14:17.810 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)"'
+2019-12-06 00:14:17.814 +01:00 [Information] Route matched with "{action = \"Get\", controller = \"Book\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[Server.Modules.Core.Common.Models.Book] Get()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:14:19.597 +01:00 [Information] books list "[]"
+2019-12-06 00:14:19.608 +01:00 [Information] Executing ObjectResult, writing value of type '"NHibernate.Linq.NhQueryable`1[[Server.Modules.Core.Common.Models.Book, Server.Modules.Core.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-12-06 00:14:19.798 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)" in 1983.2743ms
+2019-12-06 00:14:19.798 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)"'
+2019-12-06 00:14:19.799 +01:00 [Information] Request finished in 1996.3003ms 200 application/json; charset=utf-8
+2019-12-06 00:44:38.140 +01:00 [Information] Starting up
+2019-12-06 00:44:39.533 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-12-06 00:44:39.548 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-12-06 00:44:39.550 +01:00 [Information] Bytecode provider name : "lcg"
+2019-12-06 00:44:39.552 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-12-06 00:44:39.552 +01:00 [Information] Using reflection optimizer
+2019-12-06 00:44:39.582 +01:00 [Information] Mapping class: "Alibi.Framework.Models.UserModel" -> "Users"
+2019-12-06 00:44:39.611 +01:00 [Information] Mapping class: "Server.Modules.Core.Common.Models.Book" -> "Books"
+2019-12-06 00:44:39.619 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:39.634 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:39.635 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:44:40.684 +01:00 [Information] checking mappings queue
+2019-12-06 00:44:40.684 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:44:40.684 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:44:40.684 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:44:40.686 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:44:40.703 +01:00 [Information] checking mappings queue
+2019-12-06 00:44:40.704 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:44:40.704 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:44:40.704 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:44:40.704 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:44:40.708 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.709 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.713 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.714 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.714 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.715 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.717 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.717 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:40.719 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:44:41.282 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:41.283 +01:00 [Information] checking mappings queue
+2019-12-06 00:44:41.283 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:44:41.283 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:44:41.283 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:44:41.283 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:44:41.298 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:41.313 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:44:41.366 +01:00 [Information] Using dialect defined converter
+2019-12-06 00:44:41.367 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-12-06 00:44:41.367 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:44:41.367 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-12-06 00:44:41.368 +01:00 [Information] Optimize cache for minimal puts: False
+2019-12-06 00:44:41.368 +01:00 [Information] Connection release mode: "auto"
+2019-12-06 00:44:41.368 +01:00 [Information] Default batch fetch size: 1
+2019-12-06 00:44:41.369 +01:00 [Information] echoing all SQL to stdout
+2019-12-06 00:44:41.369 +01:00 [Information] Statistics: "disabled"
+2019-12-06 00:44:41.369 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-12-06 00:44:41.369 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-12-06 00:44:41.370 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-12-06 00:44:41.371 +01:00 [Information] Query language substitutions: "{}"
+2019-12-06 00:44:41.372 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:44:41.372 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-12-06 00:44:41.372 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-12-06 00:44:41.373 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:44:41.373 +01:00 [Information] Default flush mode: Auto
+2019-12-06 00:44:41.373 +01:00 [Information] Named query checking : "enabled"
+2019-12-06 00:44:41.388 +01:00 [Information] building session factory
+2019-12-06 00:44:41.523 +01:00 [Information] no name configured
+2019-12-06 00:44:41.706 +01:00 [Information] Running schema validator
+2019-12-06 00:44:41.706 +01:00 [Information] fetching database metadata
+2019-12-06 00:44:41.842 +01:00 [Information] checking mappings queue
+2019-12-06 00:44:41.842 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:44:41.843 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:44:41.843 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:44:41.843 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:44:41.986 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-12-06 00:44:41.987 +01:00 [Information] columns: "id, Username, Password, Token, Firstname, Lastname"
+2019-12-06 00:44:42.111 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-12-06 00:44:42.111 +01:00 [Information] columns: "Id, Title"
+2019-12-06 00:44:42.270 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-06 00:44:42.491 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-12-06 00:44:42.491 +01:00 [Information] Hosting environment: "Development"
+2019-12-06 00:44:42.491 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-12-06 00:44:42.523 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337//  
+2019-12-06 00:44:42.643 +01:00 [Information] Request finished in 116.6225ms 404 
+2019-12-06 00:44:52.586 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-12-06 00:44:52.605 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:44:52.634 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "Void Populate()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:44:52.692 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)" in 49.6694ms
+2019-12-06 00:44:52.693 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:44:52.695 +01:00 [Error] An unhandled exception has occurred while executing the request.
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'Alibi.Framework.Interceptor.AuthenticatedUserInterceptor' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service)
+   at Autofac.Extras.DynamicProxy.RegistrationExtensions.<>c__DisplayClass9_1`3.<EnableInterfaceInterceptors>b__2(Service s)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.CastIterator[TResult](IEnumerable source)+MoveNext()
+   at System.Collections.Generic.LargeArrayBuilder`1.AddRange(IEnumerable`1 items)
+   at System.Collections.Generic.EnumerableHelpers.ToArray[T](IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Autofac.Extras.DynamicProxy.RegistrationExtensions.<>c__DisplayClass9_0`3.<EnableInterfaceInterceptors>b__0(Object sender, ActivatingEventArgs`1 e)
+   at Autofac.Core.Registration.ComponentRegistration.RaiseActivating(IComponentContext context, IEnumerable`1 parameters, Object& instance)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters, Object& decoratorTarget)
+   at Autofac.Core.Resolving.InstanceLookup.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-12-06 00:44:52.896 +01:00 [Information] Request finished in 310.42080000000004ms 500 text/html; charset=utf-8
+2019-12-06 00:45:49.193 +01:00 [Information] Starting up
+2019-12-06 00:45:50.516 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-12-06 00:45:50.530 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-12-06 00:45:50.531 +01:00 [Information] Bytecode provider name : "lcg"
+2019-12-06 00:45:50.534 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-12-06 00:45:50.534 +01:00 [Information] Using reflection optimizer
+2019-12-06 00:45:50.565 +01:00 [Information] Mapping class: "Alibi.Framework.Models.UserModel" -> "Users"
+2019-12-06 00:45:50.595 +01:00 [Information] Mapping class: "Server.Modules.Core.Common.Models.Book" -> "Books"
+2019-12-06 00:45:50.605 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:50.621 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:50.622 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:45:51.644 +01:00 [Information] checking mappings queue
+2019-12-06 00:45:51.644 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:45:51.644 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:45:51.644 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:45:51.648 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:45:51.675 +01:00 [Information] checking mappings queue
+2019-12-06 00:45:51.675 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:45:51.675 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:45:51.675 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:45:51.676 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:45:51.681 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.683 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.688 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.688 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.689 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.689 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.694 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.694 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:51.696 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:45:52.543 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:52.544 +01:00 [Information] checking mappings queue
+2019-12-06 00:45:52.544 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:45:52.544 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:45:52.544 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:45:52.544 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:45:52.557 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:52.570 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:45:52.624 +01:00 [Information] Using dialect defined converter
+2019-12-06 00:45:52.625 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-12-06 00:45:52.625 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:45:52.626 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-12-06 00:45:52.627 +01:00 [Information] Optimize cache for minimal puts: False
+2019-12-06 00:45:52.627 +01:00 [Information] Connection release mode: "auto"
+2019-12-06 00:45:52.627 +01:00 [Information] Default batch fetch size: 1
+2019-12-06 00:45:52.627 +01:00 [Information] echoing all SQL to stdout
+2019-12-06 00:45:52.627 +01:00 [Information] Statistics: "disabled"
+2019-12-06 00:45:52.627 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-12-06 00:45:52.628 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-12-06 00:45:52.628 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-12-06 00:45:52.629 +01:00 [Information] Query language substitutions: "{}"
+2019-12-06 00:45:52.630 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:45:52.630 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-12-06 00:45:52.630 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-12-06 00:45:52.631 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:45:52.631 +01:00 [Information] Default flush mode: Auto
+2019-12-06 00:45:52.631 +01:00 [Information] Named query checking : "enabled"
+2019-12-06 00:45:52.647 +01:00 [Information] building session factory
+2019-12-06 00:45:52.781 +01:00 [Information] no name configured
+2019-12-06 00:45:52.947 +01:00 [Information] Running schema validator
+2019-12-06 00:45:52.947 +01:00 [Information] fetching database metadata
+2019-12-06 00:45:53.079 +01:00 [Information] checking mappings queue
+2019-12-06 00:45:53.079 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:45:53.080 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:45:53.080 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:45:53.080 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:45:53.234 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-12-06 00:45:53.235 +01:00 [Information] columns: "id, Username, Password, Token, Firstname, Lastname"
+2019-12-06 00:45:53.353 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-12-06 00:45:53.353 +01:00 [Information] columns: "Id, Title"
+2019-12-06 00:45:53.513 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-06 00:45:53.712 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-12-06 00:45:53.712 +01:00 [Information] Hosting environment: "Development"
+2019-12-06 00:45:53.712 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-12-06 00:45:53.748 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337//  
+2019-12-06 00:45:53.874 +01:00 [Information] Request finished in 128.4023ms 404 
+2019-12-06 00:45:56.051 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-12-06 00:45:56.067 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:45:56.093 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "Void Populate()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:47:21.095 +01:00 [Information] Starting up
+2019-12-06 00:47:22.392 +01:00 [Information] NHibernate "5.2.6 (assembly 5.2.0.0)"
+2019-12-06 00:47:22.404 +01:00 [Information] "hibernate-configuration" section not found in application configuration file
+2019-12-06 00:47:22.407 +01:00 [Information] Bytecode provider name : "lcg"
+2019-12-06 00:47:22.409 +01:00 [Information] Objects factory class : "NHibernate.Bytecode.ActivatorObjectsFactory"
+2019-12-06 00:47:22.410 +01:00 [Information] Using reflection optimizer
+2019-12-06 00:47:22.439 +01:00 [Information] Mapping class: "Alibi.Framework.Models.UserModel" -> "Users"
+2019-12-06 00:47:22.465 +01:00 [Information] Mapping class: "Server.Modules.Core.Common.Models.Book" -> "Books"
+2019-12-06 00:47:22.475 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:22.487 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:22.489 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:47:23.495 +01:00 [Information] checking mappings queue
+2019-12-06 00:47:23.495 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:47:23.496 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:47:23.496 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:47:23.498 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:47:23.514 +01:00 [Information] checking mappings queue
+2019-12-06 00:47:23.514 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:47:23.514 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:47:23.514 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:47:23.515 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:47:23.519 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.521 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.526 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.526 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.527 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.527 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.530 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.530 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:23.532 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:47:24.073 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:24.073 +01:00 [Information] checking mappings queue
+2019-12-06 00:47:24.074 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:47:24.074 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:47:24.074 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:47:24.074 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:47:24.088 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:24.111 +01:00 [Information] Using dialect: "NHibernate.Dialect.MySQL5Dialect"
+2019-12-06 00:47:24.159 +01:00 [Information] Using dialect defined converter
+2019-12-06 00:47:24.159 +01:00 [Information] Generate SQL with comments: "enabled"
+2019-12-06 00:47:24.160 +01:00 [Information] Configuring ConnectionProvider
+2019-12-06 00:47:24.160 +01:00 [Information] Transaction factory: "NHibernate.Transaction.AdoNetWithSystemTransactionFactory"
+2019-12-06 00:47:24.161 +01:00 [Information] Optimize cache for minimal puts: False
+2019-12-06 00:47:24.161 +01:00 [Information] Connection release mode: "auto"
+2019-12-06 00:47:24.161 +01:00 [Information] Default batch fetch size: 1
+2019-12-06 00:47:24.161 +01:00 [Information] echoing all SQL to stdout
+2019-12-06 00:47:24.161 +01:00 [Information] Statistics: "disabled"
+2019-12-06 00:47:24.161 +01:00 [Information] Deleted entity synthetic identifier rollback: "disabled"
+2019-12-06 00:47:24.162 +01:00 [Information] Query translator: "NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory"
+2019-12-06 00:47:24.162 +01:00 [Information] Query provider: "NHibernate.Linq.DefaultQueryProvider"
+2019-12-06 00:47:24.164 +01:00 [Information] Query language substitutions: "{}"
+2019-12-06 00:47:24.165 +01:00 [Information] cache provider: "NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:47:24.165 +01:00 [Information] Order SQL inserts for batching: "disabled"
+2019-12-06 00:47:24.165 +01:00 [Information] Order SQL updates for batching: "disabled"
+2019-12-06 00:47:24.166 +01:00 [Information] Batcher factory: "NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4"
+2019-12-06 00:47:24.166 +01:00 [Information] Default flush mode: Auto
+2019-12-06 00:47:24.166 +01:00 [Information] Named query checking : "enabled"
+2019-12-06 00:47:24.179 +01:00 [Information] building session factory
+2019-12-06 00:47:24.302 +01:00 [Information] no name configured
+2019-12-06 00:47:24.470 +01:00 [Information] Running schema validator
+2019-12-06 00:47:24.470 +01:00 [Information] fetching database metadata
+2019-12-06 00:47:24.581 +01:00 [Information] checking mappings queue
+2019-12-06 00:47:24.581 +01:00 [Information] processing one-to-many association mappings
+2019-12-06 00:47:24.581 +01:00 [Information] processing one-to-one association property references
+2019-12-06 00:47:24.581 +01:00 [Information] processing foreign key constraints
+2019-12-06 00:47:24.581 +01:00 [Information] processing filters (second pass)
+2019-12-06 00:47:24.769 +01:00 [Information] table found: "def.""NhibernateWebApp.""Users"
+2019-12-06 00:47:24.770 +01:00 [Information] columns: "id, Username, Password, Token, Firstname, Lastname"
+2019-12-06 00:47:24.904 +01:00 [Information] table found: "def.""NhibernateWebApp.""Books"
+2019-12-06 00:47:24.904 +01:00 [Information] columns: "Id, Title"
+2019-12-06 00:47:25.052 +01:00 [Information] User profile is available. Using '"C:\Users\ghazi\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-06 00:47:25.254 +01:00 [Information] Application started. Press Ctrl+C to shut down.
+2019-12-06 00:47:25.255 +01:00 [Information] Hosting environment: "Development"
+2019-12-06 00:47:25.255 +01:00 [Information] Content root path: "C:\Users\ghazi\source\repos\NhibernateApp\NhibernateApp"
+2019-12-06 00:47:25.285 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337//  
+2019-12-06 00:47:25.417 +01:00 [Information] Request finished in 133.82680000000002ms 404 
+2019-12-06 00:47:26.974 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/populate  
+2019-12-06 00:47:26.991 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:47:27.018 +01:00 [Information] Route matched with "{action = \"Populate\", controller = \"Book\"}". Executing controller action with signature "Void Populate()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:49:12.797 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)" in 105772.41040000001ms
+2019-12-06 00:49:12.798 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Populate (Server.Modules.Core.Controller)"'
+2019-12-06 00:49:12.807 +01:00 [Information] Request finished in 105833.9338ms 200 
+2019-12-06 00:49:15.942 +01:00 [Information] Request starting HTTP/2.0 GET https://localhost:44337/api/book/  
+2019-12-06 00:49:15.948 +01:00 [Information] Executing endpoint '"Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)"'
+2019-12-06 00:49:15.952 +01:00 [Information] Route matched with "{action = \"Get\", controller = \"Book\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[Server.Modules.Core.Common.Models.Book] Get()" on controller "Server.Modules.Core.Controllers.BookController" ("Server.Modules.Core.Controller").
+2019-12-06 00:49:17.360 +01:00 [Information] books list "[{\"Title\":\"book text matter\",\"Id\":1}]"
+2019-12-06 00:49:17.368 +01:00 [Information] Executing ObjectResult, writing value of type '"NHibernate.Linq.NhQueryable`1[[Server.Modules.Core.Common.Models.Book, Server.Modules.Core.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-12-06 00:49:17.562 +01:00 [Information] Executed action "Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)" in 1608.9984000000002ms
+2019-12-06 00:49:17.562 +01:00 [Information] Executed endpoint '"Server.Modules.Core.Controllers.BookController.Get (Server.Modules.Core.Controller)"'
+2019-12-06 00:49:17.563 +01:00 [Information] Request finished in 1621.3253ms 200 application/json; charset=utf-8

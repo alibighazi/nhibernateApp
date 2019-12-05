@@ -1,18 +1,38 @@
 ﻿using Castle.DynamicProxy;
+using NHibernate;
+using System.Transactions;
 
 namespace Alibi.Framework.Interceptor
 {
-    public class TransactionInterceptor : IInterceptor
+    public class TransactionInterceptor : Castle.DynamicProxy.IInterceptor
     {
 
-        public TransactionInterceptor()
-        {
 
+        private ISession _session = null;
+
+        public TransactionInterceptor(ISession session)
+        {
+            _session = session;
         }
 
         public void Intercept(IInvocation invocation)
         {
-            invocation.Proceed();
+
+
+            using TransactionScope tx = new TransactionScope();
+            try
+            {
+                invocation.Proceed();
+                _session.Flush();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                tx.Complete();
+            }
+
         }
     }
 }

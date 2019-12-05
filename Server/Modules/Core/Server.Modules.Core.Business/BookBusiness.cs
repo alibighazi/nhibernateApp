@@ -29,24 +29,7 @@ namespace Server.Modules.Core.Business
 
         public void SaveBook(Book book)
         {
-            _repository.BeginTransaction();
-            try
-            {
-                _repository.Save(book);
-                _repository.CommitTransaction();
-
-            }
-            catch (Exception ex)
-            {
-                _repository.RollbackTransaction();
-                throw ex;
-            }
-            finally
-            {
-                _repository.CloseTransaction();
-                _repository.CloseSession();
-                _repository.Dispose();
-            }
+            _repository.Save(book);
         }
     }
 }

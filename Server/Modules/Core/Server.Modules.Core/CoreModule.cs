@@ -22,7 +22,8 @@ namespace Server.Modules.Core
             builder.RegisterType<BookBusiness>().As<IBookBusiness>()
                 .InstancePerLifetimeScope()
                 .EnableInterfaceInterceptors()
-                .InterceptedBy(typeof(TransactionInterceptor));
+                .InterceptedBy(typeof(TransactionInterceptor))
+                .InterceptedBy(typeof(AuthenticatedUserInterceptor));
         }
     }
 }
