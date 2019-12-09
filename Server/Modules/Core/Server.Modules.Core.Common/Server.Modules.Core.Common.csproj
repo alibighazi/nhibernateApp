@@ -14,4 +14,8 @@
     <ProjectReference Include="..\..\..\..\Alibi.Framework\Alibi.Framework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Response\" />
+  </ItemGroup>
+
 </Project>

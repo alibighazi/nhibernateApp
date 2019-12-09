@@ -24,13 +24,10 @@ namespace Alibi.Framework.Interceptor
             {
                 invocation.Proceed();
                 _session.Flush();
+                tx.Complete();
             }
             catch
             {
-            }
-            finally
-            {
-                tx.Complete();
             }
 
         }

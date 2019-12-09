@@ -22,13 +22,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Alibi.Framework\Alibi.Framework.csproj" />
-    <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core.Controller\Server.Modules.Core.Controller.csproj" />
     <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core.Mapping\Server.Modules.Core.Mapping.csproj" />
     <ProjectReference Include="..\Server\Modules\Core\Server.Modules.Core\Server.Modules.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" appsettings_1development_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

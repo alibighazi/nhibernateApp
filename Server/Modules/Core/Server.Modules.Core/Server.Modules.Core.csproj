@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Server.Modules.Core.Business\Server.Modules.Core.Business.csproj" />
+    <ProjectReference Include="..\Server.Modules.Core.Controller\Server.Modules.Core.Controller.csproj" />
     <ProjectReference Include="..\Server.Modules.Core.Mapping\Server.Modules.Core.Mapping.csproj" />
   </ItemGroup>
 

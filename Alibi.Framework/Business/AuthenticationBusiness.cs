@@ -12,17 +12,17 @@ namespace Alibi.Framework.Business
     public class AuthenticationBusiness : IAuthenticationBusiness
     {
 
-        private IRepository<UserModel> _userRepository;
+        private IRepository<UserIdentityModel> _userRepository;
         private readonly AppSettings _appSettings;
 
-        public AuthenticationBusiness(IRepository<UserModel> userRepository, IOptions<AppSettings> appSettings)
+        public AuthenticationBusiness(IRepository<UserIdentityModel> userRepository, IOptions<AppSettings> appSettings)
         {
             _userRepository = userRepository;
             _appSettings = appSettings.Value;
 
         }
 
-        public UserModel Login(string username, string password)
+        public UserIdentityModel Login(string username, string password)
         {
             var user = _userRepository.FindBy(x => x.Username == username && x.Password == password);
 
@@ -49,12 +49,11 @@ namespace Alibi.Framework.Business
             return user;
         }
 
-        public UserModel Register(UserModel model)
+        public UserIdentityModel Register(UserIdentityModel model)
         {
 
             _userRepository.Save(model);
             _userRepository.Dispose();
-           // _userRepository.CommitTransaction();
 
             return model;
         }

@@ -7,31 +7,24 @@ using NHibernate.Mapping.ByCode;
 using NHibernate.Tool.hbm2ddl;
 using NHibernate.Type;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 
 namespace Alibi.Framework.DbContext
 {
     public static class NHibernateExtensions
     {
-        public static ContainerBuilder AddNHibernate(this ContainerBuilder builder, string connectionString, IList<string> mappingsAssembly)
+        public static ContainerBuilder AddNHibernate(this ContainerBuilder builder, string connectionString)
         {
             var mapper = new ModelMapper();
             mapper.AddMappings(typeof(NHibernateExtensions).Assembly.ExportedTypes);
 
-            foreach (var item in mappingsAssembly)
-            {
-                var assembly = Assembly.Load(item);
-                mapper.AddMappings(assembly.GetExportedTypes());
-            }
+           
             
             HbmMapping domainMapping = mapper.CompileMappingForAllExplicitlyAddedEntities();
 
             var configuration = new Configuration();
             configuration.DataBaseIntegration(c =>
             {
-                c.Dialect<NHibernate.Dialect.MySQL5Dialect>();
+                c.Dialect<NHibernate.Dialect.MsSql2012Dialect>();
                 c.ConnectionString = connectionString;
                 c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 c.SchemaAction = SchemaAutoAction.Validate;
@@ -44,7 +37,7 @@ namespace Alibi.Framework.DbContext
 
             configuration.AddMapping(domainMapping);
             var exporter = new SchemaExport(configuration);
-            exporter.Execute(true, true, false);
+            //exporter.Execute(true, true, false);
 
 
 

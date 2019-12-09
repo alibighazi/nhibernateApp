@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Server.Modules.Core.Common.Interfaces;
 using Server.Modules.Core.Common.Models;
+using Server.Modules.Core.Common.Request;
 using System.Collections.Generic;
 
 namespace Server.Modules.Core.Controllers
@@ -37,13 +38,9 @@ namespace Server.Modules.Core.Controllers
 
         [HttpGet]
         [Route("Populate")]
-        public void Populate()
+        public virtual void Populate(BookSaveRequest book)
         {
-            var b = new Book
-            {
-                Title = "book text matter"
-            };
-            _bookBusiness.SaveBook(b);
+            _bookBusiness.SaveBook(book.Value);
         }
 
 

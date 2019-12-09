@@ -5,7 +5,7 @@ using NHibernate.Mapping.ByCode.Conformist;
 
 namespace Alibi.Framework.mapping
 {
-    public class UserMap : ClassMapping<UserModel>
+    public class UserMap : ClassMapping<UserIdentityModel>
     {
         public UserMap()
         {
@@ -35,21 +35,7 @@ namespace Alibi.Framework.mapping
                 x.Column("Password");
             });
 
-            Property(b => b.Firstname, x =>
-            {
-                x.Length(50);
-                x.Type(NHibernateUtil.StringClob);
-                x.NotNullable(false);
-                x.Column("Firstname");
-            });
-             Property(b => b.Lastname, x =>
-            {
-                x.Length(50);
-                x.Type(NHibernateUtil.StringClob);
-                x.NotNullable(false);
-                x.Column("Lastname");
-            });
-
+      
 
             Property(b => b.Token, x =>
             {
