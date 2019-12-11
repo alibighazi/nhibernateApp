@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties appsettings_1json__JsonSchema="" appsettings_1development_1json__JsonSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Server.Modules.Core.Business\Server.Modules.Core.Business.csproj" />
+    <ProjectReference Include="..\Server.Modules.Core.Controller\Server.Modules.Core.Controller.csproj" />
+    <ProjectReference Include="..\Server.Modules.Core.Mapping\Server.Modules.Core.Mapping.csproj" />
+  </ItemGroup>
+
+</Project>

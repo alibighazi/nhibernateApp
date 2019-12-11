@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhibernateApp", "NhibernateApp\NhibernateApp.csproj", "{76DB2C40-8FF5-472B-B22E-D3D38E5F2941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NhibernateApp", "NhibernateApp\NhibernateApp.csproj", "{76DB2C40-8FF5-472B-B22E-D3D38E5F2941}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{BC43C491-5793-49B6-90F3-F1C74394EF9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{CA25A0C6-917B-47C8-975F-8019A1B68499}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D3B6B432-5D31-4597-848D-B40358D0B1C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alibi.Framework", "Alibi.Framework\Alibi.Framework.csproj", "{AA80DD4E-7AF6-4F6D-B788-526BDCA4EA3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Modules.Core", "Server\Modules\Core\Server.Modules.Core\Server.Modules.Core.csproj", "{8C857F63-DD04-4816-BE14-D4BD7939B6A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Modules.Core.Business", "Server\Modules\Core\Server.Modules.Core.Business\Server.Modules.Core.Business.csproj", "{EEF7E7E5-DE67-46C6-881C-EC4F26B8B7FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Modules.Core.Common", "Server\Modules\Core\Server.Modules.Core.Common\Server.Modules.Core.Common.csproj", "{9CAE5388-7A4E-4C8F-AF08-61D3DDE4029C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Modules.Core.Controller", "Server\Modules\Core\Server.Modules.Core.Controller\Server.Modules.Core.Controller.csproj", "{79108049-DF6F-41D2-A181-D660A4C88264}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Modules.Core.Mapping", "Server\Modules\Core\Server.Modules.Core.Mapping\Server.Modules.Core.Mapping.csproj", "{42C637DC-8279-480A-961D-88F2A81D35AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +33,42 @@ Global
 		{76DB2C40-8FF5-472B-B22E-D3D38E5F2941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76DB2C40-8FF5-472B-B22E-D3D38E5F2941}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76DB2C40-8FF5-472B-B22E-D3D38E5F2941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA80DD4E-7AF6-4F6D-B788-526BDCA4EA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA80DD4E-7AF6-4F6D-B788-526BDCA4EA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA80DD4E-7AF6-4F6D-B788-526BDCA4EA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA80DD4E-7AF6-4F6D-B788-526BDCA4EA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C857F63-DD04-4816-BE14-D4BD7939B6A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C857F63-DD04-4816-BE14-D4BD7939B6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C857F63-DD04-4816-BE14-D4BD7939B6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C857F63-DD04-4816-BE14-D4BD7939B6A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF7E7E5-DE67-46C6-881C-EC4F26B8B7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF7E7E5-DE67-46C6-881C-EC4F26B8B7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF7E7E5-DE67-46C6-881C-EC4F26B8B7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF7E7E5-DE67-46C6-881C-EC4F26B8B7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAE5388-7A4E-4C8F-AF08-61D3DDE4029C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAE5388-7A4E-4C8F-AF08-61D3DDE4029C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAE5388-7A4E-4C8F-AF08-61D3DDE4029C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAE5388-7A4E-4C8F-AF08-61D3DDE4029C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79108049-DF6F-41D2-A181-D660A4C88264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79108049-DF6F-41D2-A181-D660A4C88264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79108049-DF6F-41D2-A181-D660A4C88264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79108049-DF6F-41D2-A181-D660A4C88264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C637DC-8279-480A-961D-88F2A81D35AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C637DC-8279-480A-961D-88F2A81D35AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C637DC-8279-480A-961D-88F2A81D35AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C637DC-8279-480A-961D-88F2A81D35AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA25A0C6-917B-47C8-975F-8019A1B68499} = {BC43C491-5793-49B6-90F3-F1C74394EF9E}
+		{D3B6B432-5D31-4597-848D-B40358D0B1C1} = {CA25A0C6-917B-47C8-975F-8019A1B68499}
+		{8C857F63-DD04-4816-BE14-D4BD7939B6A9} = {D3B6B432-5D31-4597-848D-B40358D0B1C1}
+		{EEF7E7E5-DE67-46C6-881C-EC4F26B8B7FC} = {D3B6B432-5D31-4597-848D-B40358D0B1C1}
+		{9CAE5388-7A4E-4C8F-AF08-61D3DDE4029C} = {D3B6B432-5D31-4597-848D-B40358D0B1C1}
+		{79108049-DF6F-41D2-A181-D660A4C88264} = {D3B6B432-5D31-4597-848D-B40358D0B1C1}
+		{42C637DC-8279-480A-961D-88F2A81D35AA} = {D3B6B432-5D31-4597-848D-B40358D0B1C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6B80F45-C937-409B-91EC-D8AFAF6AAD1B}
