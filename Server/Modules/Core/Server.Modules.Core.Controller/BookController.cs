@@ -29,7 +29,7 @@ namespace Server.Modules.Core.Controllers
         [HttpGet]
         public IEnumerable<Book> Get()
         {
-
+            // fix this please in the next release ...
             var books = _bookBusiness.ListBooks();
             _logger.LogInformation("books list {books}", JsonConvert.SerializeObject(books));
             return books;
