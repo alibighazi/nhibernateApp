@@ -30,6 +30,8 @@ namespace Alibi.Framework.Srartup
             {
                 Log.Information("Starting up");
                 CreateHostBuilder(args).Build().Run();
+
+               // Host.CreateDefaultBuilder().Run<Startup>();
             }
             catch (Exception ex)
             {

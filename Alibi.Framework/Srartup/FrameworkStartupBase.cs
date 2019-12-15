@@ -1,4 +1,5 @@
 ﻿using Alibi.Framework.DbContext;
+using Alibi.Framework.Middlewares;
 using Alibi.Framework.Models;
 using Autofac;
 using Autofac.Core;
@@ -6,6 +7,7 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -52,8 +54,9 @@ namespace Alibi.Framework.Srartup
                 .AddControllersAsServices()
                 .AddJsonOptions(o =>
                 {
-                    o.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-                    o.JsonSerializerOptions.WriteIndented = true;
+
+                    o = ConfigureJson(o);
+                    
 
                 });
 
@@ -92,7 +95,7 @@ namespace Alibi.Framework.Srartup
 
         }
 
-
+        
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
@@ -138,19 +141,38 @@ namespace Alibi.Framework.Srartup
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseMiddleware<ExceptionHandler>();
+
             }
+            else
+            {
+                app.UseMiddleware<ExceptionHandler>();
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            // use angular
+            app.UseStaticFiles();
+            app.UseRouting();
+
 
             // global cors policy
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
+
+
+          
+
             app.UseAuthentication();
-            app.UseHttpsRedirection();
-            app.UseRouting();
             app.UseAuthorization();
 
+
+
+            
+
+            //app.UseResponseCompression();
 
             app.UseEndpoints(endpoints =>
             {
@@ -167,7 +189,13 @@ namespace Alibi.Framework.Srartup
         public abstract void AddConfigure(IApplicationBuilder app);
         public abstract void AddService(IServiceCollection services);
 
+        public virtual JsonOptions ConfigureJson(JsonOptions jsonOptions)
+        {
 
+            jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+            jsonOptions.JsonSerializerOptions.WriteIndented = true;
+            return jsonOptions;
+        }
 
 
     }
