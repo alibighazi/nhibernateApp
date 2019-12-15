@@ -1,4 +1,6 @@
 ﻿using Alibi.Framework.DbContext;
+using Alibi.Framework.Validation;
+using FluentValidation;
 using Server.Modules.Core.Common.Interfaces;
 using Server.Modules.Core.Common.Models;
 using System;
@@ -6,6 +8,22 @@ using System.Collections.Generic;
 
 namespace Server.Modules.Core.Business
 {
+
+
+
+    //public sealed class SignInModelValidator : Validator<Book>
+    //{
+    //    public SignInModelValidator()
+    //    {
+    //        WithMessage("Book is invalid.");
+    //        RuleFor(x => x.Title)
+    //            .NotEmpty()
+    //            .MinimumLength(3)
+    //            .Matches(Regexes.Email);
+    //    }
+    //}
+
+
     public class BookBusiness : IBookBusiness
     {
         private IRepository<Book> _repository;
@@ -29,6 +47,14 @@ namespace Server.Modules.Core.Business
 
         public void SaveBook(Book book)
         {
+            //var validation = new SignInModelValidator().Validate(book);
+            //if(validation.Succeeded)
+            //{
+
+            //}
+
+
+
             _repository.Save(book);
         }
     }

@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Alibi.Framework.Srartup
 {
-    class FrameworkStartup : FrameworkStartupBase
+    internal class FrameworkStartup : FrameworkStartupBase
     {
 
 

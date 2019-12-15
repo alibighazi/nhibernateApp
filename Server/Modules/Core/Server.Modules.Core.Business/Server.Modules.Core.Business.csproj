@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ProjectExtensions>
@@ -9,6 +9,10 @@
       <UserProperties appsettings_1json__JsonSchema="" appsettings_1development_1json__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Alibi.Framework\Alibi.Framework.csproj" />
