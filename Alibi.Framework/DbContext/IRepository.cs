@@ -7,15 +7,6 @@ namespace Alibi.Framework.DbContext
 {
     public interface IRepository<T> where T : class, IDisposable
     {
-        void BeginTransaction();
-        void CommitTransaction();
-        void RollbackTransaction();
-        void CloseTransaction();
-        void CloseSession();
-        //T Save(T entity);
-        //void Delete(T entity);
-        //IQueryable<T> Books { get; }
-
 
         T FirstOrDefault();
 
@@ -33,6 +24,7 @@ namespace Alibi.Framework.DbContext
 
 
 
+        IList<T> List();
         IList<T> List(Expression<Func<T, bool>> predicate);
         IList<T> List<TKey>(Expression<Func<T, bool>> predicate, Expression<Func<T, TKey>> order, bool orderByDescending);
 
@@ -59,6 +51,9 @@ namespace Alibi.Framework.DbContext
         IQueryable<T> FilterBy(Expression<Func<T, bool>> expression);
 
         void Dispose();
+
+
+        IList<TT> GetUsers<TT>();   
 
     }
 }

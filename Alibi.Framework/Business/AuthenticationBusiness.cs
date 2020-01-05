@@ -11,19 +11,18 @@ namespace Alibi.Framework.Business
 {
     public class AuthenticationBusiness : IAuthenticationBusiness
     {
-
-        private IRepository<UserIdentityModel> _userRepository;
+        private readonly IRepository<UserIdentityModel> _userRepository;
         private readonly AppSettings _appSettings;
 
         public AuthenticationBusiness(IRepository<UserIdentityModel> userRepository, IOptions<AppSettings> appSettings)
         {
             _userRepository = userRepository;
             _appSettings = appSettings.Value;
-
         }
 
         public UserIdentityModel Login(string username, string password)
         {
+            var res = _userRepository.GetUsers<UserIdentityModel>();
             var user = _userRepository.FindBy(x => x.Username == username && x.Password == password);
 
             // return null if user not found
@@ -41,7 +40,8 @@ namespace Alibi.Framework.Business
                     new Claim(ClaimTypes.Name, user.Username)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             user.Token = tokenHandler.WriteToken(token);
@@ -51,7 +51,6 @@ namespace Alibi.Framework.Business
 
         public UserIdentityModel Register(UserIdentityModel model)
         {
-
             _userRepository.Save(model);
             _userRepository.Dispose();
 

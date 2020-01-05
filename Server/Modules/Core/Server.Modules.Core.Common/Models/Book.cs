@@ -4,18 +4,17 @@ using FluentValidation;
 
 namespace Server.Modules.Core.Common.Models
 {
-    public class Book : BaseModel<int>
+    public class Book : Entity
     {
         public virtual string Title { get; set; }
-        public virtual SignInModelValidator Validate { get; set; }
     }
 
 
-    public sealed class SignInModelValidator : Validator<Book>
+    public sealed class BookValidator : Validator<Book>
     {
-        public SignInModelValidator()
+        public BookValidator()
         {
-            WithMessage("Error" );
+            WithMessage("Error");
             RuleFor(x => x.Title)
                 .NotEmpty()
                 .Matches(Regexes.Email);

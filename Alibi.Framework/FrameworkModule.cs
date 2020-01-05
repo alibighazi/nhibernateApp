@@ -8,15 +8,13 @@ using Microsoft.AspNetCore.Http;
 
 namespace Alibi.Framework
 {
-    public class FrameworkModule : Autofac.Module
+    public class FrameworkModule : Module
     {
-
         protected override void Load(ContainerBuilder builder)
         {
-
             builder.RegisterType<AuthenticationBusiness>()
                 .As<IAuthenticationBusiness>();
-           
+
             builder.Register(c => new HttpContextAccessor())
                 .As<IHttpContextAccessor>().SingleInstance();
 
@@ -27,14 +25,14 @@ namespace Alibi.Framework
 
             builder.Register(c => new TransactionInterceptor(c.Resolve<NHibernate.ISession>()));
 
-            builder.Register(c => new AuthenticatedUserInterceptor(c.Resolve<IHttpContextAccessor>(), c.Resolve<IRepository<UserIdentityModel>>()));
-
+            builder.Register(c =>
+                new AuthenticatedUserInterceptor(c.Resolve<IHttpContextAccessor>(),
+                    c.Resolve<IRepository<UserIdentityModel>>()));
+            builder.RegisterType<ValidateRequestInterceptor>();
 
 
             builder.RegisterType<AuthenticationController>()
                 .PropertiesAutowired();
         }
-
-
     }
 }

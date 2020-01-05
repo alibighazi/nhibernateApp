@@ -1,13 +1,12 @@
-﻿using Alibi.Framework.Validation;
+﻿using Alibi.Framework.Models;
+using Alibi.Framework.Validation;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using System;
 using System.Linq;
 using System.Net;
-using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Alibi.Framework.Middlewares
+namespace Alibi.Framework.Middleware
 {
     public class ExceptionHandler
     {
@@ -24,34 +23,30 @@ namespace Alibi.Framework.Middlewares
             {
                 await _next.Invoke(context);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 await HandleExceptionAsync(context, ex);
             }
         }
 
-        private async Task HandleExceptionAsync(HttpContext context, Exception exception)
+        private async Task HandleExceptionAsync(HttpContext context, System.Exception exception)
         {
             var response = context.Response;
             response.ContentType = "application/json";
             response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-            if(exception.GetType().Name == "ValidationException")
+            if (exception.GetType().Name == "CustomValidationException")
             {
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = false,
-                };
-                
                 var exceptionD = JsonConvert.DeserializeObject<Result>(exception.Message);
                 await response.WriteAsync(JsonConvert.SerializeObject(new
                 {
                     // customize as you need
-                    error = new
+                    Exception = new ExceptionModel
                     {
-                        message = exceptionD.Message,
-                        exception = exception.GetType().Name,
-                        Errors = exceptionD.Errors.Select(x => new { x.PropertyName , x.ErrorMessage})
+                        Code = "VALIDATION_ERROR",
+                        Message = exceptionD.Message,
+                        Type = exception.GetType().FullName,
+                        Errors = exceptionD.Errors.Select(x => new { x.PropertyName, x.ErrorMessage })
                     }
                 }));
             }
@@ -59,15 +54,14 @@ namespace Alibi.Framework.Middlewares
             {
                 await response.WriteAsync(JsonConvert.SerializeObject(new
                 {
-                    // customize as you need
-                    error = new
+                    Exception = new ExceptionModel
                     {
-                        message = exception.Message,
-                        exception = exception.GetType().Name
+                        Code = "INTERNAL_ERROR",
+                        Message = exception.Message,
+                        Type = exception.GetType().FullName
                     }
                 }));
             }
-            
         }
     }
 }

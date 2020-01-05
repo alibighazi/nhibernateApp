@@ -1,9 +1,10 @@
 ﻿using Alibi.Framework.DbContext;
-using Alibi.Framework.Middlewares;
+using Alibi.Framework.Middleware;
 using Alibi.Framework.Models;
 using Autofac;
 using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,28 +20,29 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 
-namespace Alibi.Framework.Srartup
+namespace Alibi.Framework.Startup
 {
     public abstract class FrameworkStartupBase
     {
+        private IConfiguration Configuration { get; }
+        private ILifetimeScope AutofacContainer { get; set; }
 
-        public IConfiguration Configuration { get; }
-        public ILifetimeScope AutofacContainer { get; private set; }
 
-
-        public FrameworkStartupBase(IWebHostEnvironment env)
+        protected FrameworkStartupBase(IHostEnvironment env)
         {
             var builder = new ConfigurationBuilder()
-               .SetBasePath(env.ContentRootPath)
-               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-               .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-               .AddEnvironmentVariables();
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            #region -- load controllers class ------------------------ 
+            #region -- load controllers class ------------------------
+
+            // TODO: remove controller assembly and move them into one assembly with business and other stuff
             var mappingsAssembly = Configuration.GetSection("Modules").Get<IList<string>>();
             foreach (var item in mappingsAssembly)
             {
@@ -48,17 +50,14 @@ namespace Alibi.Framework.Srartup
                 services.AddControllers()
                     .AddApplicationPart(assembly);
             }
+
             #endregion
 
+
             services.AddControllers()
+                .AddFluentValidation()
                 .AddControllersAsServices()
-                .AddJsonOptions(o =>
-                {
-
-                    o = ConfigureJson(o);
-                    
-
-                });
+                .AddJsonOptions(ConfigureJson);
 
             services.AddCors();
 
@@ -66,46 +65,47 @@ namespace Alibi.Framework.Srartup
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
-            #region -- configure jwt authentication------------------- 
+            #region -- configure jwt authentication-------------------
+
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
             services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(x =>
-            {
-#if DEBUG
-                x.RequireHttpsMetadata = false;
-#endif
-                x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-            });
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(x =>
+                {
+#if DEBUG
+                    x.RequireHttpsMetadata = false;
+#endif
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
+
             #endregion
 
             services.AddAuthorization();
             AddService(services);
-
         }
-
-        
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            #region -- load modules class assembly ------------------- 
+            #region -- load modules class assembly -------------------
+
             var mappingsAssembly = Configuration.GetSection("Modules").Get<IList<string>>();
             foreach (var item in mappingsAssembly)
             {
                 Assembly.Load(item);
                 Assembly.Load(item + ".Mapping");
             }
+
             #endregion
 
             #region -- load autofac modules ---------------------------
@@ -115,34 +115,34 @@ namespace Alibi.Framework.Srartup
             var type = typeof(Autofac.Module);
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(s => s.GetTypes())
-                .Where(p => type.IsAssignableFrom(p) && p.FullName.ToLower().Contains("server")).ToList();
+                .Where(p => p.FullName != null && (type.IsAssignableFrom(p) && p.FullName.ToLower().Contains("server")))
+                .ToList();
 
-            foreach (var item in types)
+            foreach (var instance in types.Select(item => (IModule) Activator.CreateInstance(item)))
             {
-                IModule instance = (IModule)Activator.CreateInstance(item);
                 builder.RegisterModule(instance);
             }
+
             #endregion
 
             #region -- nhibernate ---------------------------------------
 
-            // get connectionstring
+            // get the connection string
             var connStr = Configuration.GetConnectionString("DefaultConnection");
             // create nhibernate session
             builder.AddNHibernate(connStr);
+
             #endregion
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             AutofacContainer = app.ApplicationServices.GetAutofacRoot();
-            
+
 
             if (env.IsDevelopment())
             {
                 app.UseMiddleware<ExceptionHandler>();
-
             }
             else
             {
@@ -163,41 +163,25 @@ namespace Alibi.Framework.Srartup
                 .AllowAnyHeader());
 
 
-          
-
             app.UseAuthentication();
             app.UseAuthorization();
 
 
-
-            
-
             //app.UseResponseCompression();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 
             AddConfigure(app);
-
-
         }
 
 
-        public abstract void AddConfigure(IApplicationBuilder app);
-        public abstract void AddService(IServiceCollection services);
-
-        public virtual JsonOptions ConfigureJson(JsonOptions jsonOptions)
+        protected abstract void AddConfigure(IApplicationBuilder app);
+        protected abstract void AddService(IServiceCollection services);
+        protected virtual void ConfigureJson(JsonOptions jsonOptions)
         {
-
             jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
             jsonOptions.JsonSerializerOptions.WriteIndented = true;
-            return jsonOptions;
         }
-
-
     }
-
 }

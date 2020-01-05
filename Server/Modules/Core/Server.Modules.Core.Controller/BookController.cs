@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Server.Modules.Core.Common.Interfaces;
 using Server.Modules.Core.Common.Models;
 using Server.Modules.Core.Common.Request;
-using System.Collections.Generic;
+using Server.Modules.Core.Common.Response;
 
-namespace Server.Modules.Core.Controllers
+namespace Server.Modules.Core.Controller
 {
     [Authorize]
     [ApiController]
@@ -38,9 +39,25 @@ namespace Server.Modules.Core.Controllers
 
         [HttpGet]
         [Route("Populate")]
-        public virtual void Populate(BookSaveRequest book)
+        public virtual BookSaveResponse Populate(BookSaveRequest book)
         {
-            _bookBusiness.SaveBook(book.Value);
+            try
+            {
+                _bookBusiness.SaveBook(book.Value);
+
+                return new BookSaveResponse
+                {
+                    Success = true
+                };
+            }
+            catch (System.Exception ex)
+            {
+
+                return new BookSaveResponse
+                {
+                    Exception = ex
+                };
+            }
         }
 
 

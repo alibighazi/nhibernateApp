@@ -2,11 +2,9 @@
 
 namespace Alibi.Framework.Models
 {
-    public class BaseModel<T> : IDisposable
+    public class Entity<T> : IDisposable
     {
-
         public virtual T Id { get; set; }
-
 
         private bool IsDisposed { get; set; } = false;
 
@@ -31,7 +29,10 @@ namespace Alibi.Framework.Models
 
             IsDisposed = true;
         }
+    }
 
 
+    public class Entity : Entity<int>
+    {
     }
 }

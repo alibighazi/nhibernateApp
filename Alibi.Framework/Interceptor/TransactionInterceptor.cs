@@ -6,9 +6,7 @@ namespace Alibi.Framework.Interceptor
 {
     public class TransactionInterceptor : Castle.DynamicProxy.IInterceptor
     {
-
-
-        private ISession _session = null;
+        private readonly ISession _session = null;
 
         public TransactionInterceptor(ISession session)
         {
@@ -17,19 +15,10 @@ namespace Alibi.Framework.Interceptor
 
         public void Intercept(IInvocation invocation)
         {
-
-
-            using TransactionScope tx = new TransactionScope();
-            try
-            {
-                invocation.Proceed();
-                _session.Flush();
-                tx.Complete();
-            }
-            catch
-            {
-            }
-
+            using var tx = new TransactionScope();
+            invocation.Proceed();
+            _session.Flush();
+            tx.Complete();
         }
     }
 }

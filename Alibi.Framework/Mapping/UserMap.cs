@@ -9,7 +9,6 @@ namespace Alibi.Framework.mapping
     {
         public UserMap()
         {
-
             Table("Users");
 
             Id(x => x.Id, x =>
@@ -17,7 +16,6 @@ namespace Alibi.Framework.mapping
                 x.Generator(Generators.Increment);
                 x.Column("id");
             });
-
 
             Property(b => b.Username, x =>
             {
@@ -35,8 +33,6 @@ namespace Alibi.Framework.mapping
                 x.Column("Password");
             });
 
-      
-
             Property(b => b.Token, x =>
             {
                 x.Length(50);
@@ -44,7 +40,6 @@ namespace Alibi.Framework.mapping
                 x.NotNullable(false);
                 x.Column("Token");
             });
-
         }
     }
 }

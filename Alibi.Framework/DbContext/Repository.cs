@@ -1,5 +1,7 @@
 ﻿using NHibernate;
+using NHibernate.Criterion;
 using NHibernate.Linq;
+using NHibernate.Transform;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,43 +9,37 @@ using System.Linq.Expressions;
 
 namespace Alibi.Framework.DbContext
 {
+
+
+    public static class NhibernateExtension
+    {
+
+        public static IQueryable<T> Paging<T>(this IQueryable<T> query, int skip, int take)
+        {
+            return query.Skip(skip).Take(take);
+        }
+
+        public static IQueryable<T> Ordering<T, TKey>(this IQueryable<T> query, Expression<Func<T, TKey>> field, string direction)
+        {
+            return direction == "desc" ? query.OrderByDescending(field) : query.OrderBy(field);
+        }
+
+    }
+
     public class Repository<T> : IRepository<T> where T : class, IDisposable
     {
 
-        private ISession _session = null;
-        private ITransaction _transaction = null;
+        private readonly ISession _session = null;
+        private readonly ITransaction _transaction = null;
+        private readonly Microsoft.AspNetCore.Http.IHttpContextAccessor _accessor;
 
-        public Repository(ISession session)
+
+        public Repository(ISession session, Microsoft.AspNetCore.Http.IHttpContextAccessor accessor)
         {
             _session = session;
+            _accessor = accessor;
+            var q = _accessor.HttpContext.Request.Body;
         }
-
-
-        #region Transaction and Session Management Methods
-        public void BeginTransaction()
-        {
-            _transaction = _session.BeginTransaction();
-        }
-        public void CommitTransaction()
-        {
-            _transaction.Commit();
-        }
-        public void RollbackTransaction()
-        {
-            _transaction.Rollback();
-        }
-        public void CloseTransaction()
-        {
-            _transaction.Dispose();
-            _transaction = null;
-        }
-        public void CloseSession()
-        {
-            _session.Close();
-            _session.Dispose();
-            _session = null;
-        }
-        #endregion
 
         #region IRepository Members
 
@@ -51,7 +47,9 @@ namespace Alibi.Framework.DbContext
         public void Save(T entity)
         {
             _session.SaveOrUpdate(entity);
-            //_session.Flush();
+            _session.Flush();
+
+            DetachedCriteria.For<T>().Add(Restrictions.Eq("id", 1));
         }
         public void Save(IEnumerable<T> entities)
         {
@@ -80,7 +78,7 @@ namespace Alibi.Framework.DbContext
         }
         public void Delete(IEnumerable<T> entities)
         {
-            foreach (T entity in entities)
+            foreach (var entity in entities)
             {
                 _session.Delete(entity);
             }
@@ -89,6 +87,12 @@ namespace Alibi.Framework.DbContext
         #endregion
 
         #region List
+
+        public IList<T> List()
+        {
+            return _session.Query<T>().ToList();
+        }
+
         public IList<T> List(Expression<Func<T, bool>> predicate)
         {
             return _session.Query<T>().Where(predicate).ToList();
@@ -168,15 +172,30 @@ namespace Alibi.Framework.DbContext
                 // Commit transaction by default, unless user explicitly rolls it back.
                 // To rollback transaction by default, unless user explicitly commits,                
                 // comment out the line below.
-                CommitTransaction();
             }
-            if (_session != null)
-            {
-                _session.Flush(); // commit session transactions
-                CloseSession();
-            }
+
+            if (_session == null) return;
+            _session.Flush(); // commit session transactions
+            CloseSession();
         }
+
+        private void CloseSession()
+        {
+            _session.Close();
+        }
+
         #endregion
+
+
+
+
+
+        public IList<TT> GetUsers<TT>()
+        {
+            return _session.CreateSQLQuery("exec SelectUserById :userId")
+                .SetResultTransformer(Transformers.AliasToBean<TT>())
+                .SetParameter("userId", 1).List<TT>().ToList();
+        }
 
     }
 }
