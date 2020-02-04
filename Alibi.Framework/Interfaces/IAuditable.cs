@@ -1,5 +1,6 @@
 ﻿namespace Alibi.Framework.Interfaces
 {
-    public interface IAuditable { }
-
+    public interface IAuditable
+    {
+    }
 }

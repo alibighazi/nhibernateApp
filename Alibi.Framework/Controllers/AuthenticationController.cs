@@ -7,7 +7,7 @@ namespace Alibi.Framework.Controllers
     [Route("[controller]")]
     public class AuthenticationController : ControllerBase
     {
-        private IAuthenticationBusiness _authenticationBusiness;
+        private readonly IAuthenticationBusiness _authenticationBusiness;
 
         public AuthenticationController(IAuthenticationBusiness authenticationBusiness)
         {
@@ -15,7 +15,7 @@ namespace Alibi.Framework.Controllers
         }
 
         [HttpPost("Login")]
-        public IActionResult Login([FromBody]UserIdentityModel model)
+        public IActionResult Login([FromBody] UserIdentityModel model)
         {
             var user = _authenticationBusiness.Login(model.Username, model.Password);
 
@@ -27,7 +27,7 @@ namespace Alibi.Framework.Controllers
 
 
         [HttpPost("Register")]
-        public IActionResult Register([FromBody]UserIdentityModel model)
+        public IActionResult Register([FromBody] UserIdentityModel model)
         {
             var user = _authenticationBusiness.Register(model);
 
@@ -36,6 +36,5 @@ namespace Alibi.Framework.Controllers
 
             return Ok(user);
         }
-
     }
 }
